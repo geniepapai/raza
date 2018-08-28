@@ -1,0 +1,157 @@
+
+<mat-sidenav-container>
+<mat-sidenav fixedInViewport="true" #sidenav [mode]="mode.value">
+    <mat-list role="list">
+      <mat-list-item role="listitem">Auto-resizing sidenav</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-list>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+
+<header *ngIf="headerValue == 1" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN" mat-button (click)="sidenav.toggle()"><img src="assets/images/menu_icon.svg" alt=""/></button>
+    <span class="colorWhite">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite">RECHARGE</span>
+    <button class="matButtonBGN" mat-button class="nobg" [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header  *ngIf="headerValue == 2" class="header_style">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN" mat-button (click)="sidenav.toggle()"><img src="assets/images/menu_icon_black.png" alt=""/></button>
+    <span class="colorWhite">DEALS</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/"><img src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite">RECHARGE</span>
+    <button class="matButtonBGN" mat-button class="nobg" [matMenuTriggerFor]="menu">
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </mat-toolbar-row>
+
+  </mat-toolbar>
+
+
+</header>
+
+<h1 class="heading_style1">	
+Feedback<br/>
+<span>Lorem ipsum dolor sit amet consectuer</span>
+</h1>
+<div class="home_banner feedback_banner">
+    <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+</div>
+</div>
+
+<div class="second_fold feedbackTextarea">
+		<div class="container">
+			<div class="row">
+				<h2 class="heading_style2 marginBottom">We welcome your comments, questions or complaints</h2>
+				<div class="col-md-7">
+          <p>Please use the form below to submit your feedback. We will use this feedback to continuously improve your experience with Raza.com.</p> 
+
+          <p>For immediate assistance with your account, password retrieval, transaction difficulties or other queries, please call our 24/7 customer support.</p>
+				</div>
+				
+				<div class="col-md-5 marginB2">
+					<div class="countryNumber">
+              <img src="assets/images/feedback_usamap.jpg" alt="icon">
+              <span>1-877-463-4233</span>
+          </div>
+          <div class="countryNumber">
+              <img src="assets/images/feedback_canadamap.jpg" alt="icon">
+              <span>1-877-463-4233</span>
+          </div>
+          <div class="countryNumber">
+              <img src="assets/images/feedback_ukmap.jpg" alt="icon">
+              <span>1-877-463-4233</span>
+          </div>
+          
+					
+				</div>
+			</div>
+		</div>
+</div>
+
+
+</div>
+
+<div class="signupformArea">
+  <div class="container">
+    <form class="example-form">
+        <h2 class="heading_style2">Submit Feedback </h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="floatRight">
+                    <mat-form-field class="example-full-width">
+                        <input placeholder="First Name" matInput value="">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <mat-form-field class="example-full-width">
+                    <input placeholder="Last Name" matInput value="">
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6">
+                <div class="floatRight">
+                    <mat-form-field class="example-full-width">
+                        <input placeholder="Email" matInput value="">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <mat-form-field class="example-full-width">
+                    <input placeholder="Phone" matInput value="">
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6">
+                <div class="floatRight">
+                    <mat-form-field>
+                        <mat-select placeholder="Type of Feedback">
+                            <mat-option *ngFor="let city of cities" [value]="city.value">
+                                {{ city.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <div class="col-sm-12 textarea">
+                <mat-form-field>
+                  <textarea matInput placeholder="Your Feedback"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <button mat-button class="submitButton">Submit</button>  
+    </form>
+  </div>
+</div>
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,46 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hideinMobile{display: block;}
+.showInmobile { display: none;}
+
+.mat-toolbar{ background: none;}
+.nobg{ background: none; cursor: pointer; border:none;}
+.commonRateArea{ padding: 14px 10px; margin-bottom: 60px; cursor: pointer; border: 2px solid #fff; border-radius: 4px; -moz-border-radius:4px; -webkit-border-radius:4px; height: 67px; }
+.commonRateArea:hover{ border: 2px solid #103F8A;}
+.commonRateArea span:first-child{}
+.showmoreArea{transition: height 2s; -webkit-transition: height 2s; height: 0; overflow: hidden;} 
+.showmoreArea.show{ height: auto;}
+.showmoreArea.hide{ height: 0;}
+.commonRateArea span{ padding-right: 10px;}
+h2.callAsia{color: #0B203E; text-decoration: underline;}
+.heading_style8{padding:0; margin:0 0 25px 0; color:#D3D3D3; font-size:24px;text-align:center; position:relative;}
+h2.heading_style8 span{ font-family: 'Montserrat', sans-serif; font-weight: 400; font-size:16px; color:#0B203E; font-size:16px;text-align:center; border:1px solid #D3D3D3; }
+.heading_style8:after{padding:0; margin:0; width:100%; height:1px; background-color:#D3D3D3; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); content:"";}
+.heading_style8 span{padding:5px 10px; margin:0 auto; display:inline-block; background-color:#fff; position:relative; z-index:2;}
+
+.stillSearchingArea{background: #F7F7F7; height: 210px;}
+.stillSearchingArea h3{ color: #0B203E; text-align: center; padding-top: 35px;}
+.searchingSelect{ width: 320px; margin: 0 auto;}
+.clearBoth{ clear: both; overflow: hidden;}
+.callRateArea{ background: #fff; padding: 20px 0; clear: both; overflow: hidden;}
+
+.showmore_country{ cursor:pointer;}
+
+h2.heading_style2{ font-size: 24px;}
+
+
+@media only screen and (max-width: 650px)  {
+
+  
+  .commonRateArea{margin-bottom: 10px;}
+  .hideinMobile{display: none;}
+  .showInmobile { display: block;}
+  
+  .three_service{ height: 360px;}
+}

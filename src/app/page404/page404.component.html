@@ -1,0 +1,101 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+
+<div class="home_textarea">
+  <h1>404</h1>
+  <p class="oopsText">oops! page not found</p> 
+  <p>Perhaps you can try to refresh the page, sometimes it works</p>
+</div>
+<div class="home_banner page404_banner ">
+    <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+</div>
+</div>
+
+</div>
+
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>

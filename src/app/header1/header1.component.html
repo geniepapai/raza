@@ -1,0 +1,24 @@
+<header class="header_style2"> 
+      
+      <mat-toolbar>  
+        <mat-toolbar-row>
+          <button class="matButtonBGN" mat-button (click)="sidenav.toggle()"><img src="assets/images/menu_icon.svg" alt=""/></button>
+          <span class="colorWhite">DEALS</span>
+          <!-- <span class="colorWhite">SHOP</span> -->
+          <span class="example-spacer"></span>
+          <span class="logo"><a routerLink="/"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+          <span class="example-spacer"></span>
+          <span class="colorWhite">RECHARGE</span>
+          <button class="matButtonBGN" mat-button class="nobg" [matMenuTriggerFor]="menu">
+            <img src="assets/images/account.svg" alt=""/>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </mat-toolbar-row>
+
+      </mat-toolbar>
+
+
+    </header>

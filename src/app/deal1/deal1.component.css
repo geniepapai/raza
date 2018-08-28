@@ -1,0 +1,103 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hideinMobile{display: block;}
+.showInmobile { display: none;}
+
+.mat-toolbar{ background: none;}
+.nobg{ background: none; cursor: pointer; border:none;}
+
+.commonWrapperArea p.label{ color: #103F8A;font-size: 16px;font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 20px;margin: 0; }
+.commonWrapperArea p.label span{ display: block; font-size: 12px; color: #808080;} 
+
+.commonWrapperArea p.price{ color: #103F8A;font-size: 30px;font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 29px; margin-bottom: 25px; }
+.commonWrapperArea p.price span{  font-size: 12px; color: #808080;line-height: 12px;} 
+
+
+.newcustomer h3{ color: #0B203E; font-size: 24px; text-transform: uppercase; }
+.newcustomer h3 span{ 
+    font-weight: 500;
+    padding: 0 16px;
+    border-left: 1px solid #0B203E;
+    margin-left: 10px;
+}
+.newcustomer p.headerText{ color: #808080; font-size: 15px;}
+.newcustomer p.label2{color: #0B203E; font-size: 20px;font-family: 'Montserrat', sans-serif; font-weight: 400; margin: 0;}
+
+.forgetPass{position: absolute;
+    right: 15px;
+    font-size: 12px;
+    top: 15px; color: #0A1F3F; z-index: 2;}
+.forgetPass a{ color: #0B3D8D; }
+.newcustomer p.haveAccountAlready{color: #0B203E; font-size: 16px;font-family: 'Montserrat', sans-serif; font-weight: 400; text-align: center; margin-top: 10px;}
+.newcustomer p.haveAccountAlready a{ color: #0B3D8D;}
+.newcustomer p.agreementtopolicytext{color: #0B203E; font-size: 14px;font-family: 'Montserrat', sans-serif; font-weight: 400; margin-top: 25px; text-align: center;}
+
+
+
+.deals{ padding: 30px 30px !important;}
+.deal1commonUl{ list-style-type: none; clear:both;  width: 100%;position: relative; padding: 0px; margin: 50px 0 0 0;}
+.deal1commonUl .leftArea{ width: 50%; float: left;}
+.deal1commonUl .rightArea{width: 50%; float: left;}
+.deal1commonUl .commonDiv{ text-align: left; width: 97%; background: #F2F2F2;  padding:45px 26px;  margin: 16px 2% 15px 0; position: relative; -webkit-transition: border .5s; /* Safari */
+    transition: border .8s; border: 2px solid #fff; }
+ul.deal1commonUl li:last-child{ border-right: none;}
+.deals h2{ color: #0B203E;font-size: 29px; font-family: 'Montserrat', sans-serif; font-weight: 400; text-align: center;}
+
+.deal1commonUl .commonDiv h5{color:#103F8A;font-size: 26px; font-family: 'Montserrat', sans-serif; font-weight: 400; text-transform: uppercase; }
+.deal1commonUl .commonDiv p{color:#000;font-size: 16px; font-family: 'Montserrat', sans-serif; font-weight: 400; margin: 0 0 5px 0;}
+.deal1commonUl .commonDiv a{ text-decoration: underline; color:#103F8A;font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: 500;}
+
+.leftFlag{ position: absolute; top: 0; left: 0;}
+.rightFlag{ position: absolute; top: 0; right: 0;}
+.dealBg{ position: absolute; left: 50%; margin-left: -76px;}
+.imagesArea{ text-align: right;} 
+.yellowStarLeft{ position: absolute; left: 7px; bottom: 6px;}
+.yellowStarRight{ position: absolute; right: 7px; bottom: 6px;}
+.burst{ position: absolute; right: -138px; bottom: -52px;}
+.clearFix{ clear: both; overflow: hidden; height: 1px;}
+.firstClass{ height: 255px !important;}
+.secondClass{ height: 200px !important;} 
+.deal1commonUl .commonDiv:hover{ border: 2px solid #103F8A;}
+
+/*.deal1commonUl .leftArea:hover .firstClass{height: 200px !important;}
+.deal1commonUl .leftArea:hover .firstClass2{height: 260px !important;}
+
+.deal1commonUl .rightArea:hover .secondClass{height: 200px !important;}
+.deal1commonUl .rightArea:hover .secondClass2{height: 260px !important;} */
+.clearFix{ height: 5px;} 
+
+
+@media only screen and (max-width: 650px)  {
+  .hideinMobile{display: none;}
+  .showInmobile { display: block;}
+  .three_service{ height: 360px;}
+  .virtual1Form{ width: auto; margin: 25px auto 0;}
+  .commonWrapperArea h3{ font-size: 12px;}
+  .commonWrapperArea{padding: 30px 12px;}
+  .commonWrapperArea p.headerText{ font-size: 14px; line-height:20px;}
+  .virtualNumberList h4{font-size: 19px;}
+  .forgetPass{ top:-13px;}
+
+  ul.deal1commonUl li{ width: 100%; display: block; border-right: none; border-bottom: 1px solid #E2E7ED; height:auto;}
+  ul.deal1commonUl li:last-child{ border-bottom: none;}
+  .deal1commonUl .leftArea{ width: 100%; float: none;}
+  .deal1commonUl .rightArea{width: 100%; float: none;}
+  .firstClass{ height: auto !important;}
+  .firstClass2{ height: auto !important;}
+  .secondClass{ height: auto !important;}
+  .secondClass2{ height: auto !important;}
+  .imagesArea{ text-align: left; margin-bottom: 20px;} 
+  .burst{ right: -49px !important;}
+  .deal1commonUl .leftArea:hover .firstClass{height: auto !important;}
+.deal1commonUl .leftArea:hover .firstClass2{height: auto !important;}
+
+.deal1commonUl .rightArea:hover .secondClass{height: auto !important;}
+.deal1commonUl .rightArea:hover .secondClass2{height: auto !important;}
+.deals h2{ margin-top: 20px;}
+}

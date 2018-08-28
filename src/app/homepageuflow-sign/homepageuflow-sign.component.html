@@ -1,0 +1,212 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <a mat-list-item routerLink=".">
+        <span class="mainSpan">INTERNATIONAL CALLING
+          <span class="slider"></span>
+        </span>
+      
+      </a>
+      <a mat-list-item routerLink=".">
+        <span class="mainSpan">MOBILE TOP-UP
+          <span class="slider"></span>
+        </span>
+      
+      </a>
+      <a mat-list-item routerLink=".">
+        <span class="mainSpan">CALL ME LOCAL
+          <span class="slider"></span>
+        </span>
+        <span class="subMenu"><img src="assets/images/sub_menu_icon.svg" alt="arrow down" /></span>
+      </a>
+      <a mat-list-item routerLink=".">
+        <span class="mainSpan">SIGNUP / LOGIN
+          <span class="slider"></span>
+        </span>
+        <span class="subMenu"><img src="assets/images/sub_menu_icon.svg" alt="arrow down" /></span>
+      </a>
+      <a mat-list-item routerLink=".">
+        <span class="mainSpan">RECHARGE
+          <span class="slider"></span>
+        </span>
+      
+      </a>
+      <a mat-list-item routerLink=".">
+        <span class="mainSpan">LIVE CHAT
+          <span class="slider"></span>
+        </span>
+      
+      </a>
+      <a mat-list-item routerLink=".">
+        <span class="mainSpan">CONTACT US
+          <span class="slider"></span>
+        </span>
+      
+      </a>
+      
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+<header class="header_style">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+
+
+</header>
+
+
+</div>
+
+
+</div>
+
+
+<div class="recharge_block recharge2">
+      <!--rechargeStep -->
+    <div class="rechargeStepMain">
+    <div class="rechargeStep">
+        <div class="step1 active">
+            <p class="step">Step 1</p>
+            <p class="stepName">Login</p>
+        </div>
+        <div class="step2">
+            <p class="step">Step 2</p>
+            <p class="stepName">Payment</p>
+        </div>
+        <div class="step3">
+            <p class="step">Step 3</p>
+            <p class="stepName">Confirmation</p>
+        </div>
+    </div>
+    </div>
+    <!-- rechargeStep -->
+      <p class="updateCard">Almost there...</p>
+    	<div class="container containerMobile">
+        	<div class="row">
+            <div class="col-xl-6">
+                <div class="col-md-12">
+                    <h2 class="heading_style4">
+                        <span>Express checkout</span>
+                    </h2>
+                </div>
+                <div class="col-md-12">
+                <form>
+                <div class="form_holder form_holder2 express_checkout">
+                    <p class="mobile_guest">Mobile</p>
+                    <div class="smallLine"></div> 
+                    <div class="col-sm-12 formRowM15">
+                        <mat-form-field>
+                        <mat-select placeholder="Choose your country">
+                            <mat-option value="india">India</mat-option>
+                            <mat-option value="canada">Canada</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-12 formRowM15">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Phone number" value="">
+                        </mat-form-field>
+                    </div>
+                    
+                    <div class="form_row1">
+                    	
+                        <div class="input_holder1">
+                        	<button mat-button class="submitButton">Verify</button> 
+                        </div>
+                    </div>
+
+                    <div class="orArea">
+                        <p class="heading_styleSmall">
+                            <span>or</span>
+                        </p>
+                    </div>
+                    <p class="mobile_guest">Checkout as a guest</p>
+                    <div class="smallLine"></div>
+                    <p class="noWorryText">Not ready to commit? Don’t worry about it, we’ll be here when you’re ready to take things to the next level.</p>
+                	<div class="form_row1">
+                    	
+                        <div class="input_holder1">
+                        	<button mat-button class="submitButton">checkout</button> 
+                        </div>
+                    </div>
+                    <p class="haveAccountTxt">Have an account already? <a href="#">Login here</a></p>
+                </div>
+                </form>
+                </div>
+            </div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-5">
+              <div class="col-md-12">
+                    <h2 class="heading_style4">
+                        <span>Your order</span>
+                    </h2>
+                </div>
+            	<table class="table">
+                <tbody>
+                  <tr>
+                    <td>$20</td>
+                    <td>$20</td>
+                  </tr>
+                  
+                  <tr class="total">
+                    <td>Total (USD)</td>
+                    <td>$20</td>
+                  </tr>
+                </tbody>
+              </table>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

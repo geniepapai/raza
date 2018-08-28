@@ -1,0 +1,166 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hideinMobile{display: block;}
+.showInmobile { display: none;}
+
+.mat-toolbar{ background: none;}
+.nobg{ background: none; cursor: pointer; border:none;}
+
+.commonWrapperArea p.label{ color: #103F8A;font-size: 16px;font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 20px;margin: 0; }
+.commonWrapperArea p.label span{ display: block; font-size: 12px; color: #808080;} 
+
+.commonWrapperArea p.price{ color: #103F8A;font-size: 30px;font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 29px; margin-bottom: 25px; }
+.commonWrapperArea p.price span{  font-size: 12px; color: #808080;line-height: 12px;} 
+
+
+.newcustomer h3{ color: #0B203E; font-size: 24px; text-transform: uppercase; }
+.newcustomer h3 span{ 
+    font-weight: 500;
+    padding: 0 16px;
+    border-left: 1px solid #0B203E;
+    margin-left: 10px;
+}
+.newcustomer p.headerText{ color: #808080; font-size: 15px;}
+.newcustomer p.label2{color: #0B203E; font-size: 20px;font-family: 'Montserrat', sans-serif; font-weight: 400; margin: 0;}
+
+.forgetPass{position: absolute;
+    right: 15px;
+    font-size: 12px;
+    top: 15px; color: #0A1F3F; z-index: 2;}
+.forgetPass a{ color: #0B3D8D; }
+.newcustomer p.haveAccountAlready{color: #0B203E; font-size: 16px;font-family: 'Montserrat', sans-serif; font-weight: 400; text-align: center; margin-top: 10px;}
+.newcustomer p.haveAccountAlready a{ color: #0B3D8D;}
+.newcustomer p.agreementtopolicytext{color: #0B203E; font-size: 14px;font-family: 'Montserrat', sans-serif; font-weight: 400; margin-top: 25px; text-align: center;}
+
+
+.deals{ padding: 42px 20px!important;}
+.deals h2{ color: #0B203E;font-size: 29px; font-family: 'Montserrat', sans-serif; font-weight: 400; text-align: center;margin-bottom: 30px;}
+
+.deals .table{ /* margin-top: 60px;  -webkit-box-shadow: 20px 20px 50px 0px rgba(194,190,194,1);
+-moz-box-shadow: 20px 20px 50px 0px rgba(194,190,194,1);
+box-shadow: 20px 20px 50px 0px rgba(194,190,194,1);*/}
+.deals .table thead th{ border:none; color: #0B203E; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: 400; border-bottom: 1px solid #A2A8B0; }
+.deals .table-striped tbody tr:nth-of-type(odd) {
+    background:none !important;
+}
+.scroll{ height: 800px; overflow-y: scroll;}
+.height20{ width: 100%; height: 20px; } 
+.marginNone{ margin-top:0px !important; }
+.deals .table-striped tbody tr{ border-bottom: 1px solid #E2E7ED; color: #0B203E;}
+.deals .table tr td{ color: #0B203E; font-size: 15px; font-family: 'Montserrat', sans-serif; font-weight: 400; }
+.deals .table tr td img{ margin-right: 8px;}
+.deals .table td,.deals .table th{border: none; padding: 15px 4px; text-align: center}
+.deals .table td:first-child, .deals .table th:first-child{ text-align: left;}
+.dropDownArea{ width: 60%; margin:30px auto 10px;}
+.deals .submitButton{ width: auto; padding: 13px 30px;}
+.deals .buttonArea{ margin: 30px 0;}
+.deals .card-header a{ color: #808080 !important; font-size: 16px;}
+.linethroughArea{ position: relative;height: 40px;margin:68px 0 23px;}
+.line{ height: 1px; background: #0B203E;}
+.linethroughArea span{ background: #fff; color: #3A4B63; font-size: 24px; font-family: 'Montserrat', sans-serif; font-weight: 400; position: absolute; padding: 10px 40px;;left: 41%; top: -26px; }
+.mapAreaD{ width: 437px; height: 476px; margin: 60px auto; position: relative;}
+.mapAreaD h4{ font-size: 80px; font-weight: 600; font-family: 'Montserrat', sans-serif; text-align: center;position: absolute;top: 40%;left: 21%;color: #fff; }
+.mapAreaD h4 span{ display: block; text-align: center; font-size: 20px; font-weight: 400;}
+p.mapText{ color: #808080; font-size: 16px; margin: 20px 0 30px 0; font-weight: 400; font-family: 'Montserrat', sans-serif; text-align: center;}
+.mostpopularButon{ background: #265194; text-align: center; color: #fff; font-size: 14px; font-weight: 600; font-family: 'Montserrat', sans-serif;text-transform: uppercase;padding: 10px 20px;position: absolute;right: 0px; top:60px;}
+a.learMore{ text-decoration: underline; color: #0160E0; font-size: 14px; font-weight: 600; font-family: 'Montserrat', sans-serif; margin-top: 40px;}
+.learnMorearea{ text-align: center;}
+.callRate{ text-align: center; margin: 30px 0;}
+.callRate span{color: #0B203E; font-size: 16px; font-weight: 600; font-family: 'Montserrat', sans-serif; margin: 0 10px; } 
+.callRate span:last-child{font-weight: 500;font-size: 23px;}
+
+.commonminArea{ width: 100%; border:1px solid #E2E7ED; text-align: center; padding:30px 0 20px 0;}
+.commonminArea p.mins{color: #0B203E; font-size: 50px; font-weight: 600; font-family: 'Montserrat', sans-serif; line-height: 37px; margin-top: 65px;}
+.commonminArea p.mins span{ display: block; font-size: 20px;}
+.smallLine{ width: 30px; height: 1px; background:#919EAE; margin:10px auto; }
+p.charge{font-size: 30px; font-weight: 600; font-family: 'Montserrat', sans-serif;} 
+.twoIcon{width: 95px;margin: 0 auto;clear: both;overflow: hidden;}
+.twoIcon img:first-child{ float: left;}
+.twoIcon img:last-child{ float: right; margin-top: 7px;}
+.deal4Textare{ clear: both; overflow: hidden; margin:40px 0;}
+.deal4Textare ul{ list-style-type: none; float: left; margin: 0px; padding: 0px;}
+.deal4Textare ul li{ float: left; margin-right: 10px; color: #808080;font-weight: 500; font-size: 14px;  font-family: 'Montserrat', sans-serif;}
+.deal4Textare ul li a{ text-decoration: underline; color: #0160E0;  }
+
+.deal4Textare ul:first-child{ float: left;}
+.deal4Textare ul:last-child{ float: right;}
+.deal4Textare ul li:last-child{ margin: 0px;}
+.callRate span{ display: block; margin: 10px auto;}
+.callRate image{ margin: 0 auto;}
+.viewAllrate{ text-align: center; margin-top: 30px;}
+.viewAllrate a{ text-decoration: underline; color: #0160E0; font-weight: 500; font-size: 14px;  font-family: 'Montserrat', sans-serif;}
+.commonminArea{ margin-bottom: 25px;}
+
+.headingText{color: #0B203E; font-size: 18px;font-family: 'Montserrat', sans-serif; font-weight: 500;padding: 10px 0;
+    border-bottom: 1px solid #ccc;}
+.aboutUsblueArea p{ color: #fff; font-size: 13px; font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 26px;} 
+ul.alphabet{ list-style-type: none; display: table; margin: 0 auto; position: relative;}
+ul.alphabet li{ float: left; color: #0B203E; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 400; margin-right: 9px; cursor: pointer; }
+ul.alphabet li.active{ font-weight: 500;border-bottom: 1px solid #0B203E;}
+
+.searchArea{ width: 70%; margin: 0 auto;}
+.deals .table thead th img{ margin-right: 5px; } 
+
+
+.popular_ratea{background: #F3F3F3; border:1px solid #E7E7E7; padding:15px 25px; margin: 68px 0 0 20px;}
+.popular_ratea h4{ color: #103F8A; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 500; padding-bottom: 10px; }
+.popular_ratea .table-striped tbody tr{ border-top: 1px solid #E2E7ED !important; border-bottom:none !important; color: #0B203E;}
+
+.popular_ratea.textArea{ text-align: center; color: #103F8A; padding: 25px 35px; margin-top: 30px;}
+.popular_ratea.textArea h3{ color: #103F8A;font-size: 26px; font-family: 'Montserrat', sans-serif; font-weight: 400; text-transform: none !important; margin-bottom: 17px;}
+.popular_ratea.textArea p{ color: #103F8A;font-size: 16px; font-family: 'Montserrat', sans-serif; font-weight: 400;}
+.popular_ratea.textArea p.number{ font-size: 18px; font-weight: 500;}
+.popular_ratea.textArea .line{ height: 1px; background:#D6D6D6; margin: 15px 0; }
+.chat_iconArea{ clear: both; overflow: hidden; display: table; margin: 0 auto;}
+.chat_iconArea .iconArea{ float: left; margin-right: 10px;}
+.chat_iconArea .onlineChat{ float: left; text-align: center;}
+.popular_ratea.textArea p.chatText{ font-size: 18px; font-weight: 500; margin-bottom: 2px;}
+.popular_ratea.textArea p.onlineText{ font-size: 13px; font-weight: 400; color: #7ED321 !important;}
+
+.searchtable table tr th:first-child{width: 60%;}
+.searchtable table tr td:first-child{width: 60%;}
+
+@media only screen and (max-width: 650px)  {
+  .hideinMobile{display: none;}
+  .showInmobile { display: block;}
+  .three_service{ height: 360px;}
+  .virtual1Form{ width: auto; margin: 25px auto 0;}
+  .commonWrapperArea h3{ font-size: 12px;}
+  .commonWrapperArea{padding: 30px 12px;}
+  .commonWrapperArea p.headerText{ font-size: 14px; line-height:20px;}
+  .virtualNumberList h4{font-size: 19px;}
+  .forgetPass{ top:-13px;}
+
+  ul.deal1commonUl li{ width: 100%; display: block; border-right: none; border-bottom: 1px solid #E2E7ED; height:auto;}
+  ul.deal1commonUl li:last-child{ border-bottom: none;}
+  .deals{ padding:30px 10px !important;}
+  .deals h2{ font-size: 20px !important;}
+  .deals .table th,.deals .table td{ font-size: 14px !important;}
+  .deals .card-header a{ font-size: 13px !important; line-height: 26px !important;}
+  .mostpopularButon{ position:unset; display: table; margin: 20px auto;}
+  .mapAreaD{ width: 100%; height: auto;}
+  .mapAreaD img{ max-width: 100%;}
+  .mapAreaD h4{ font-size: 47px;}
+  .mapAreaD h4 span{ font-size: 14px;}
+  p.mapText{ font-size: 14px;}
+
+  .commonminArea{ margin-bottom: 25px;}
+  .deal4Textare{ margin: 10px 0;}
+  .deal4Textare ul{display: table;margin: 9px auto;float: none !important;}
+  .deal4Textare ul li{ font-size: 12px;}
+  .callRate span{ display: block; margin: 10px auto;}
+  .callRate image{ margin: 0 auto;}
+
+  .popular_ratea{margin: 18px 0 0 0px !important; background: none; padding: 0px; border:none;}
+  .popular_ratea.textArea{background: #F3F3F3; padding: 25px;}
+  ul.alphabet{ padding-left: 0px;}
+  ul.alphabet li{ border-bottom: 1px solid #fff;}
+  .popular_ratea.textArea p{ font-size: 14px;}
+  .popular_ratea.textArea h3{ font-weight: 100;}
+} 

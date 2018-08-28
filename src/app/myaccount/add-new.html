@@ -1,0 +1,52 @@
+<div class="form_holder commonPopup addEnroll">
+    <span class="closeIcon" (click)="closeIcon()"  mat-dialog-close><i class="material-icons">close</i></span>
+    <h2>Calling from information</h2>
+    <mat-dialog-content>
+    
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Country">
+                    <mat-option value="india">India</mat-option>
+                    <mat-option value="usa">USA</mat-option>
+                </mat-select>
+            </mat-form-field>    
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Sate/Province">
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="20">20</mat-option>
+                </mat-select>
+            </mat-form-field>    
+        </div>
+    </div>
+
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Area Code">
+                    <mat-option value="india">India</mat-option>
+                    <mat-option value="usa">USA</mat-option>
+                </mat-select>
+            </mat-form-field>    
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Available Numbers">
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="20">20</mat-option>
+                </mat-select>
+            </mat-form-field>    
+        </div>
+    </div>
+    
+    <div class="form_row1">
+        
+        <div class="input_holder1">
+            <button mat-button (click)="callToInfo()" class="submitButton">Continue</button> 
+        </div>
+    </div>
+    </mat-dialog-content>
+    
+</div>

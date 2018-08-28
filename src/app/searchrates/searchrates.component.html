@@ -1,0 +1,389 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">
+        <span class="mainSpan">{{nav}}
+          <span class="slider"></span>
+        </span>
+      
+      </a>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+  <div class="first_fold">
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+    <h1 class="heading_style1">	
+      Search Rates<br/>
+      <span>Lorem ipsum dolor doloa</span>
+    </h1>
+    <div class="home_banner searchrates_banner">
+        <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+    </div>
+  </div>
+  <!-- common wrapper -->
+  <div class="commonWrapperArea newcustomer deals faqs searchRates">
+      <div class="commonWrapperAreaShadowArea">
+          <div class="coverShadow"></div>
+      </div>
+      <div class="searchArea"> 
+        <mat-form-field>
+          <mat-icon matPrefix>search</mat-icon>
+          <input matInput placeholder="Where do you wish to call?" type="text">
+        </mat-form-field>
+      </div>
+      <ul class="alphabet">
+        <li class="active" [ngClass]="{'active': id === 1 }" (click)="addClass(id=1)">A</li>
+        <li [ngClass]="{'active': id === 2 }" (click)="addClass(id=2)">B</li>
+        <li [ngClass]="{'active': id === 3 }" (click)="addClass(id=3)">C</li>
+        <li [ngClass]="{'active': id === 4 }" (click)="addClass(id=4)">D</li>
+        <li [ngClass]="{'active': id === 5 }" (click)="addClass(id=5)">E</li>
+        <li [ngClass]="{'active': id === 6 }" (click)="addClass(id=6)">F</li>
+        <li [ngClass]="{'active': id === 7 }" (click)="addClass(id=7)">G</li>
+        <li [ngClass]="{'active': id === 8 }" (click)="addClass(id=8)">H</li>
+        <li [ngClass]="{'active': id === 9 }" (click)="addClass(id=9)">I</li>
+        <li [ngClass]="{'active': id === 10 }" (click)="addClass(id=10)">J</li>
+        <li [ngClass]="{'active': id === 11 }" (click)="addClass(id=11)">K</li>
+        <li [ngClass]="{'active': id === 12 }" (click)="addClass(id=12)">L</li>
+        <li [ngClass]="{'active': id === 13 }" (click)="addClass(id=13)">M</li>
+        <li [ngClass]="{'active': id === 14 }" (click)="addClass(id=14)">N</li>
+        <li [ngClass]="{'active': id === 15 }" (click)="addClass(id=15)">O</li>
+        <li [ngClass]="{'active': id === 16 }" (click)="addClass(id=16)">P</li>
+        <li [ngClass]="{'active': id === 17 }" (click)="addClass(id=17)">Q</li>
+        <li [ngClass]="{'active': id === 18 }" (click)="addClass(id=18)">R</li>
+        <li [ngClass]="{'active': id === 19 }" (click)="addClass(id=19)">S</li>
+        <li [ngClass]="{'active': id === 20 }" (click)="addClass(id=20)">T</li>
+        <li [ngClass]="{'active': id === 21 }" (click)="addClass(id=21)">U</li>
+        <li [ngClass]="{'active': id === 22 }" (click)="addClass(id=22)">V</li>
+        <li [ngClass]="{'active': id === 23 }" (click)="addClass(id=23)">W</li>
+        <li [ngClass]="{'active': id === 24 }" (click)="addClass(id=24)">X</li>
+        <li [ngClass]="{'active': id === 25 }" (click)="addClass(id=25)">Y</li>
+        <li [ngClass]="{'active': id === 26 }" (click)="addClass(id=26)">Z</li>
+      </ul>
+      <div class="row">
+        <div class="col-xl-7">
+          <div class="height20"></div>
+          <div class="searchtable">
+            <table class="table table-striped">
+                  <thead>
+                    <tr>
+                        <th scope="col"><img src="assets/images/small_triangle.svg" alt=""/>A</th>
+                        <th scope="col"><img src="assets/images/landline_icon.svg" alt=""/>Landline</th>
+                        <th scope="col"><img src="assets/images/mobile_icon.svg" alt=""/>Mobile</th>
+                    </tr>
+                  </thead>
+            </table>
+          </div>
+          <div class="scroll searchtable">
+            <table class="table table-striped">
+                <tbody>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-af" alt="Afghanistan" /></span>
+                        <span>Afghanistan</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-al" alt="Albania" /></span>
+                        <span>Albania</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-as" alt="American Samoa" /></span>
+                        <span>American Samoa</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-ad" alt="Andorra" /></span>
+                        <span>Andorra</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-ao" alt="Angola" /></span>
+                        <span>Angola</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-ai" alt="Anguilla" /></span>
+                        <span>Anguilla</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-ag" alt="Antigua and Barbuda" /></span>
+                        <span>Antigua and Barbuda</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-ar" alt="Argentina" /></span>
+                        <span>Argentina</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-am" alt="Armenia" /></span>
+                        <span>Armenia</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-au" alt="Australia" /></span>
+                        <span>Australia</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-dz" alt="Algeria" /></span>
+                        <span>Algeria</span>
+                      </td>
+                      <td>20.3</td>
+                      <td>16.9</td>
+                  </tr>
+                  
+                </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="col-xl-5">
+            <div class="popular_ratea">
+              <h4>Popular Rates</h4>
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-in" alt="india" /></span>
+                        <span>india</span>
+                      </td>
+                      <td>as low as 14.8¢</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-gh" alt="Ghana" /></span>
+                        <span>Ghana</span>
+                      </td>
+                      <td>as low as 14.8¢</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-bd" alt="Bangladesh" /></span>
+                        <span>Bangladesh</span>
+                      </td>
+                      <td>as low as 14.8¢</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-np" alt="Nepal" /></span>
+                        <span>Nepal</span>
+                      </td>
+                      <td>as low as 14.8¢</td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <span><img src="assets/images/blank.gif" class="flag flag-lk" alt="Srilanka" /></span>
+                        <span>Srilanka</span>
+                      </td>
+                      <td>as low as 14.8¢</td>
+                  </tr>
+                  
+                  
+                </tbody>
+            </table>
+
+            </div>
+            <div class="popular_ratea textArea">
+                <h3>Looking for help?</h3>
+                <p>Live chat and personal support</p>
+                <div class="line"></div>
+                <p>Call us today</p>
+                <p class="number">1-(800) 463-4233</p>
+                <div class="line"></div>
+                <div class="chat_iconArea">
+                   <div class="iconArea"><img src="assets/images/live_chat_icon.svg" alt=""/></div>
+                   <div class="onlineChat">
+                     <p class="chatText">Live Chat</p>
+                     <p class="onlineText">Online</p>
+                   </div>
+                </div>
+            </div> 
+        </div>
+      </div>
+      
+      
+
+  </div>
+  <!-- common wrapper -->
+</div>
+
+
+<!--Footer-->
+<div class="footerMargin">
+    <app-footer></app-footer>
+</div>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

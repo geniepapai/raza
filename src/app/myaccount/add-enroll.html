@@ -1,0 +1,51 @@
+<div class="form_holder commonPopup addEnroll autoRefill">
+    <span class="closeIcon" (click)="closeIcon()"  mat-dialog-close><i class="material-icons">close</i></span>
+    <h2>Auto-refill</h2>
+    <mat-dialog-content>
+    <p>Enrolling to auto-refill will allow us to recharge your account every time the balance falls below $2. We will notify you by email or text once your account is charged. You may choose to deactivate this feather any time</p>
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Plan Name" value="">
+            </mat-form-field>   
+        </div>
+    </div>
+    
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Refill Amount">
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="20">20</mat-option>
+                </mat-select>
+            </mat-form-field>    
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Credit Card">
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="20">20</mat-option>
+                </mat-select>
+            </mat-form-field>    
+        </div>
+    </div>
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <p>Get 10% extra for life</p>
+            <mat-slide-toggle>
+                Entroll to Auto-Refill
+            </mat-slide-toggle>
+            <br/><br/>
+            <mat-checkbox color="primary">I agree to Auto-Refill my plan</mat-checkbox>    
+        </div>
+        
+    </div>
+    </mat-dialog-content>
+    <div class="form_row1">
+        
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Submit</button> 
+        </div>
+    </div>
+    
+</div>

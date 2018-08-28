@@ -1,0 +1,572 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>  
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+<header class="header_style">
+ <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="myaccountTabArea">
+    <h2 class="welcomeText">Hello, Nagesh</h2>
+    
+    <div class="onlySmallScreenAccount">
+
+        <div class="myAccountMobTabContArea">
+
+            <!-- Plan details tab content -->
+            <div  class="tabContentMyaccount planDetails">
+              <p class="tabTitle">Plan Details</p> 
+              <mat-tab-group selectedIndex="2"> 
+                <mat-tab label="Your Raza Numbers">
+                  <div class="razaNumberLeft">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">S.NO</th>
+                            <th scope="col">Access Number</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">4567465738</th>
+                            <td>416-567-3674</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4567465738</th>
+                            <td>416-567-3674</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4567465738</th>
+                            <td>416-567-3674</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4567465738</th>
+                            <td>416-567-3674</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                  </div>
+                  <div class="razaNumberRight">
+                    <div class="col-xl-12 text-center">
+                        <div class="razawebNumberRightApplinkArea">
+                        <h4 class="heading_style7">You can download our app to make calls directly from Raza app Contacts</h4>
+                        <div class="app_list">
+                              <ul>
+                                  <li>
+                                      <a href="#">
+                                          <img src="assets/images/icon_googleplaystore.svg" alt="app"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                          <img src="assets/images/icon_appstore.svg" alt="app" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <p class="disclaimer">DISCLAIMER: Two cent/min will be charged for using a Toll Free or 1-800 numbers. Customer is responsible for choosing access numbers that are local and free of charge. Contact your local telephone company to confirm that the number(s) that appear are both local and free of charge for you to call. Raza.com is Not responsible for any long distance phone charges from your primary service provider.</p>
+                </mat-tab>
+                <mat-tab label="Order History">
+                  <div class="greyBg">
+                  <table class="table greyBg orderHistory">
+                    <tbody>
+                      
+                      <tr>
+                        <td>My Plan</td>
+                        <td>India unlimited</td>
+                      </tr>
+                      <tr>
+                        <td>Date</td>
+                        <td>10/2/2017@4:23PM (CST)</td>
+                      </tr>
+                      <tr>
+                        <td>Amount</td>
+                        <td>$10 USD</td>
+                      </tr>
+                      <tr>
+                        <td>Balance</td>
+                        <td>$4.53</td>
+                      </tr>
+                      <tr>
+                        <td>Add Funds</td>
+                        <td><a>Recharge</a></td>
+                      </tr>
+                      <tr>
+                        <td>Pin Number</td>
+                        <td>992XXXXXX987</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>
+                  </div>
+                  <table class="table orderHistory">
+                    <tbody>
+                      
+                      <tr>
+                        <td>My Plan</td>
+                        <td>India unlimited</td>
+                      </tr>
+                      <tr>
+                        <td>Date</td>
+                        <td>10/2/2017@4:23PM (CST)</td>
+                      </tr>
+                      <tr>
+                        <td>Amount</td>
+                        <td>$10 USD</td>
+                      </tr>
+                      <tr>
+                        <td>Balance</td>
+                        <td>$4.53</td>
+                      </tr>
+                      <tr>
+                        <td>Add Funds</td>
+                        <td><a>Recharge</a></td>
+                      </tr>
+                      <tr>
+                        <td>Pin Number</td>
+                        <td>992XXXXXX987</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>  
+
+                  <a href="#" class="showFullHistory">Show Full History</a> 
+                  
+                </mat-tab>
+                <mat-tab label="Call Details">
+                  <div class="greyBg">
+                  <table class="table greyBg orderHistory">
+                    <tbody>
+                      
+                      <tr>
+                        <td>Date</td>
+                        <td>10/4/2017  4:48AM (CST)</td>
+                      </tr>
+                      <tr>
+                        <td>Source Number</td>
+                        <td>4567465738</td>
+                      </tr>
+                      <tr>
+                        <td>Destination</td>
+                        <td>4567465738</td>
+                      </tr>
+                      <tr>
+                        <td>Dest. City</td>
+                        <td>India Mobile - 8 Series</td>
+                      </tr>
+                      <tr>
+                        <td>Duration</td>
+                        <td>00:26:00</td>
+                      </tr>
+                      <tr>
+                        <td>Amount</td>
+                        <td>0:43</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>
+                  </div>
+                  <table class="table orderHistory">
+                    <tbody>
+                      
+                      <tr>
+                        <td>Date</td>
+                        <td>10/4/2017  4:48AM (CST)</td>
+                      </tr>
+                      <tr>
+                        <td>Source Number</td>
+                        <td>4567465738</td>
+                      </tr>
+                      <tr>
+                        <td>Destination</td>
+                        <td>4567465738</td>
+                      </tr>
+                      <tr>
+                        <td>Dest. City</td>
+                        <td>India Mobile - 8 Series</td>
+                      </tr>
+                      <tr>
+                        <td>Duration</td>
+                        <td>00:26:00</td>
+                      </tr>
+                      <tr>
+                        <td>Amount</td>
+                        <td>0:43</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>  
+
+                  <a href="#" class="showFullHistory">Show Full History</a> 
+                </mat-tab>
+              </mat-tab-group>
+              
+            </div>
+            <!-- Plan details tab content -->
+            
+
+        </div>
+        
+    </div>
+
+
+    <div class="onlyDesktopAccount">
+        <a  routerLink="/myaccount" class="backButton">Back</a>
+        <div class="tabContentMyaccount planDetails">
+          <p class="tabTitle">Plan Details</p> 
+          <mat-tab-group  selectedIndex="2">
+            <mat-tab label="Your Raza Numbers">
+              <div class="razaNumberLeft">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">S.NO</th>
+                        <th scope="col">Access Number</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">4567465738</th>
+                        <td>416-567-3674</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4567465738</th>
+                        <td>416-567-3674</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4567465738</th>
+                        <td>416-567-3674</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4567465738</th>
+                        <td>416-567-3674</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+              </div>
+              <div class="razaNumberRight">
+                <div class="col-xl-12 text-center">
+                    <div class="razawebNumberRightApplinkArea">
+                    <h4 class="heading_style7">You can download our app to make calls directly from Raza app Contacts</h4>
+                    <div class="app_list">
+                          <ul>
+                              <li>
+                                  <a href="#">
+                                      <img src="assets/images/icon_googleplaystore.svg" alt="app"/>
+                                    </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                      <img src="assets/images/icon_appstore.svg" alt="app" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <p class="disclaimer">DISCLAIMER: Two cent/min will be charged for using a Toll Free or 1-800 numbers. Customer is responsible for choosing access numbers that are local and free of charge. Contact your local telephone company to confirm that the number(s) that appear are both local and free of charge for you to call. Raza.com is Not responsible for any long distance phone charges from your primary service provider.</p>
+            </mat-tab>
+            <mat-tab label="Order History">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">My Plan</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Balance</th>
+                    <th scope="col">Add Funds</th>
+                    <th scope="col">Pin Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Global Call</td>
+                    <td>10/2/2017@4:23PM (CST)</td>
+                    <td>$10 USD</td>
+                    <td>$4.53</td>
+                    <td><a href="#">Recharge</a></td>
+                    <td>992XXXXXX987</td>
+                  </tr>
+                  <tr>
+                    <td>India Unlimited</td>
+                    <td>10/2/2017@4:23PM (CST)</td>
+                    <td>$10 USD</td>
+                    <td>$4.53</td>
+                    <td><a href="#">Monthly Recharge</a></td>
+                    <td>992XXXXXX987</td>
+                  </tr>
+                  <tr>
+                    <td>Global Call</td>
+                    <td>10/2/2017@4:23PM (CST)</td>
+                    <td>$10 USD</td>
+                    <td>$4.53</td>
+                    <td><a href="#">Recharge</a></td>
+                    <td>992XXXXXX987</td>
+                  </tr>
+                  <tr>
+                    <td>Global Call</td>
+                    <td>10/2/2017@4:23PM (CST)</td>
+                    <td>$10 USD</td>
+                    <td>$4.53</td>
+                    <td><a href="#">Recharge</a></td>
+                    <td>992XXXXXX987</td>
+                  </tr>
+                  <tr>
+                    <td>India Unlimited</td>
+                    <td>10/2/2017@4:23PM (CST)</td>
+                    <td>$10 USD</td>
+                    <td>$4.53</td>
+                    <td><a href="#">Monthly Recharge</a></td>
+                    <td>992XXXXXX987</td>
+                  </tr>
+                  <tr>
+                    <td>Global Call</td>
+                    <td>10/2/2017@4:23PM (CST)</td>
+                    <td>$10 USD</td>
+                    <td>$4.53</td>
+                    <td><a href="#">Recharge</a></td>
+                    <td>992XXXXXX987</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <a href="#" class="showFullHistory">Show Full History</a> 
+            </mat-tab>
+            <mat-tab label="Call Details">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Source Number</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Dest. City</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  <tr>
+                    <td>10/4/2017 @4:48AM (CST)</td>
+                    <td>4567465738</td>
+                    <td>4567465738</td>
+                    <td>India Mobile - 8 Series</td>
+                    <td>00:26:00</td>
+                    <td>$4.53</td>
+                  </tr>
+                  
+                  
+                </tbody>
+              </table>
+              
+            </mat-tab>
+          </mat-tab-group>
+          
+        </div>
+    </div>
+</div>
+
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

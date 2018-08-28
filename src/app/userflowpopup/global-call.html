@@ -1,0 +1,172 @@
+<div class="popupGlobalCall globalCallPopUp">
+    <div class="selectRechargeamountMain">
+        <span class="closeIcon globalCall" (click)="closeIcon()"  mat-dialog-close><i class="material-icons">close</i></span>
+        <h1>Global call</h1> 
+        <mat-dialog-content>
+        <div class="selectRechargeamount">
+        <div class="bonusArea">
+            <span>Regular mins</span>
+            <span class="relative"><mat-slide-toggle>PROMO MINS</mat-slide-toggle><img class="i_icon"  matTooltip="Lorem ipsum dolor sit amet, telloines consectetur adipiscing elit, sed do cani eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim demi veniam." matTooltipPosition="right" src="assets/images/i_icon.png" alt=""/></span>
+            <span class="bonusMin2"><img src="assets/images/bonus.png" alt=""/></span>
+        </div>
+        <div class="selectRechargeAmnt"> 
+            
+            <ul>
+                <li (click)="selectAmount(id = 1)" [ngClass]="{'active': id === 1 }">
+                    <div class="commonminArea"> 
+                        <div class="callRate">
+                            <img src="assets/images/nigerian-flag.png" alt="" /> <span>8.2¢ / min</span>
+                        </div>                       
+                    </div>
+                </li>
+                <li class="active" (click)="selectAmount(id = 2)" [ngClass]="{'active': id === 2 }">
+                    <div class="commonpriceArea popular">
+                        <div class="commonminArea">
+                            <p class="mins">150
+                            <span>mins</span></p>
+                            <div class="smallLine"></div>
+                            <p class="charge">$20</p> 
+                        </div>
+                        <div class="popuplarTag"><img src="assets/images/popular_tag.png" alt=""/></div>
+                    </div>
+                </li>
+                <li (click)="selectAmount(id = 3)" [ngClass]="{'active': id === 3 }">
+                    <div class="commonpriceArea">
+                        <div class="commonminArea">
+                            <p class="mins">150
+                            <span>mins</span></p>
+                            <div class="smallLine"></div>
+                            <p class="charge">$20</p> 
+                        </div>
+                    </div>
+                </li>
+                <li (click)="selectAmount(id = 4)" [ngClass]="{'active': id === 4 }">
+                    <div class="commonpriceArea">
+                        <div class="commonminArea">
+                            <p class="mins">150
+                            <span>mins</span></p>
+                            <div class="smallLine"></div>
+                            <p class="charge">$20</p> 
+                        </div>
+                    </div>
+                </li>
+                <li  (click)="selectAmount(id = 5)" [ngClass]="{'active': id === 5 }">
+                    <div class="commonpriceArea">
+                        <div class="commonminArea">
+                            <p class="mins">150
+                            <span>mins</span></p>
+                            <div class="smallLine"></div>
+                            <p class="charge">$20</p> 
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="textARea">
+                <p>
+                    <span><a>Learn more</a>
+                    <a class="viewAll" (click)="viewAllRatesTab()">View all rates</a></span>
+                    <span>Have a question?
+                        <a>Call us</a>
+                        <a>Chat with us</a>
+                    </span>
+                </p>
+            </div>
+            <div class="viewAllRatesPanel" *ngIf="viewAllrate > 0"> 
+                <div class="row">
+                    
+                    <div class="col-md-9">
+                        <h4>Global call rates to call Nigeria</h4>
+                        <p>These rates apply to call Nigeria only, rates to call other countries may differ.</p>
+                       <table class="table">
+                            <thead>
+                                <th>Operator</th>
+                                <th>Minutes</th>
+                                <th>Rate / min</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nigeria</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Lagos</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Etisalat</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Globacom</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Mtel</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Mtn</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Zain Econet</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Etisalat</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Etisalat</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Etisalat</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                <tr>
+                                    <td>Nigeria Mobile - Etisalat</td>
+                                    <td>360</td>
+                                    <td>3.6¢ / min</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        <div class="input_holder1" style="margin-bottom:18px;">
+                            <button mat-button class="submitButton">BUY NOW</button> 
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <mat-form-field>
+                        <mat-select placeholder="Select amount">
+                            <mat-option [value]="10">$10</mat-option>
+                            <mat-option [value]="20">$20</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <p class="descText marginTop15">*All the rates are calculated on the highest denomination calling plan. For your convenience the plan is set to Auto-refill please uncheck to view the rates without auto-refill.</p>
+        </div>
+        
+        </div>
+        </mat-dialog-content>
+    </div>
+</div>

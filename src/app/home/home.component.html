@@ -1,0 +1,183 @@
+
+<mat-sidenav-container>
+<mat-sidenav #sidenav [mode]="mode.value">
+    <mat-list role="list">
+      <mat-list-item role="listitem">Auto-resizing sidenav</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-list>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+<header class="header_style">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN" mat-button (click)="sidenav.toggle()"><img src="assets/images/menu_icon.png" alt=""/></button>
+    <span class="colorWhite">DEALS</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite">RECHARGE</span>
+    <button class="matButtonBGN" mat-button class="nobg" [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.png" alt=""/>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </mat-toolbar-row>
+
+  </mat-toolbar>
+
+
+</header>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<footer class="footer_style">
+	<div class="container">
+    	<div class="footer_section1">
+        	<div class="row">
+           	  <div class="footer_column1">
+                <div class="raza_logo2">
+                	<a href="#"><img src="assets/images/raza_footerlogo.png" alt=""/></a>
+                </div>
+                <div class="ph_no">
+                	<span>Call us today</span>
+                    1-(800) 463-4233
+                </div>
+              </div>
+                <div class="footer_column2">
+                	<h4 class="heading_style3">My account</h4>
+                    <div class="footer_menu">
+                    <ul>
+                    	<li><a href="#">Overview</a></li>
+                        <li><a href="#">My profile</a></li>
+                        <li><a href="#">Purchase history</a></li>
+                        <li><a href="#">Recharge</a></li>
+                        <li><a routerLink="features2">Features2</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="footer_column2">
+                	<h4 class="heading_style3">Company</h4>
+                    <div class="footer_menu">
+                    <ul>
+                    	<li><a href="#">About raza</a></li>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Become a partner</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="footer_column2">
+                	<h4 class="heading_style3">Services</h4>
+                    <div class="footer_menu">
+                    <ul>
+                    	<li><a href="#">International calling</a></li>
+                        <li><a href="#">Mobile Top-up</a></li>
+                        <li><a href="#">Virtual numbers</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="footer_column2">
+                	<h4 class="heading_style3">Quick Links</h4>
+                    <div class="footer_menu">
+                    <ul>
+                    	<li><a href="#">Features</a></li>
+                        <li><a href="#">Mobile APP</a></li>
+                        <li><a href="#">Search Rates</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_section2">
+        	<div class="row">
+            	<div class="col-xl-6 text-left">
+                	<div class="app_list">
+                    	<ul>
+                        	<li>
+                            	<a href="#">
+                                	<img src="assets/images/icon_googleplaystore.png" alt="app">
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#">
+                                	<img src="assets/images/icon_appstore.png" alt="app">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-6 text-right">
+                	<div class="social_list">
+                    	<ul>
+                        	<li>
+                            	<a href="#">
+                                	<i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#">
+                                	<i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#">
+                                	<i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_section3">
+        	<div class="row">
+            	<div class="col-xl-6">
+                	<div class="app_list">
+                    	<ul>
+                        	<li>
+                            	<img src="assets/images/icon_payment.png" alt="app">
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-6 text-right">
+                	<div class="footer_menu2">
+                    	<ul>
+                        	<li>
+                            	<a href="#">Privacy and cookies statement</a>
+                            </li>
+                            <li>
+                            	<a href="#">Terms and conditions</a>
+                            </li>
+                            <li>
+                            	<a href="#">Mobile Top-up T &amp; C</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                    	&copy; 2017 Raza Communications  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</mat-sidenav-content>
+</mat-sidenav-container>
+

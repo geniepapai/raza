@@ -1,0 +1,562 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<h1 class="heading_style1">	
+Features<br/>
+<span>The Industry Leader in International Calling Plans, Raza Keeps You Talking.</span>
+</h1>
+<div class="home_banner features_banner">
+    <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+</div>
+</div>
+
+<div class="container">
+<ul class="features_list">
+  <ngx-carousel
+    [inputs]="headerCTile" 
+    [moveToSlide]="slideIndex" 
+    (onMove)="onmoveFn($event)" 
+    (afterCarouselViewed)="afterCarouselViewedFn($event)" 
+    (carouselLoad)="carouselTileLoad($event)">
+
+      <ngx-tile NgxCarouselItem>
+        <li [ngClass]="{'active': id === 1 }"  (click)="addClass(id=1)"> 
+          <span class="icon oneTouchIcon">
+            <img src="assets/images/one_touch_icon_grey.svg" alt=""/>
+            <img src="assets/images/one_touch_icon_white.svg" alt=""/>
+            
+          </span>
+          <span class="text">One Touch Dialing</span>
+        </li>
+      </ngx-tile>
+      <ngx-tile NgxCarouselItem>
+        <li [ngClass]="{'active': id === 2 }"  (click)="addClass(id=2)"> 
+          <span class="icon pin_less_icon">
+            <img src="assets/images/pin_less_icon_grey.svg" alt=""/>
+            <img src="assets/images/pin_less_icon_white.svg" alt=""/>
+          </span>
+          <span class="text">Pin-Less</span>
+        </li>
+      </ngx-tile>
+      <ngx-tile NgxCarouselItem>
+        <li [ngClass]="{'active': id === 3 }"  (click)="addClass(id=3)"> 
+          <span class="icon call_details_icon">
+            <img src="assets/images/call_details_icon_grey.svg" alt=""/>
+            <img src="assets/images/call_details_icon_white.svg" alt=""/>
+          </span>
+          <span class="text">Call Details</span>
+        </li>
+      </ngx-tile>
+      <ngx-tile NgxCarouselItem>
+        <li  [ngClass]="{'active': id === 4 }"  (click)="addClass(id=4)">
+          <span class="icon money_back_icon">
+            <img src="assets/images/money_back_icon_grey.svg" alt=""/>
+            <img src="assets/images/money_back_icon_white.svg" alt=""/>
+          </span>
+          <span class="text">100% Money Back</span>
+        </li>
+      </ngx-tile>
+      <ngx-tile NgxCarouselItem>
+        <li [ngClass]="{'active': id === 5 }"  (click)="addClass(id=5)">
+          <span class="icon auto_refil_icon">
+            <img src="assets/images/auto_refil_icon_grey.svg" alt=""/>
+            <img src="assets/images/auto_refil_icon_white.svg" alt=""/>
+          </span> 
+          <span class="text">Auto Refill</span>
+        </li>
+      </ngx-tile>
+      <ngx-tile NgxCarouselItem>
+        <li [ngClass]="{'active': id === 6 }"  (click)="addClass(id=6)">
+          <span class="icon call_forward_icon">
+            <img src="assets/images/call_forward_icon_grey.svg" alt=""/>
+            <img src="assets/images/call_forward_icon_white.svg" alt=""/>
+          </span>
+          <span class="text">Call Forwarding</span>
+        </li>
+      </ngx-tile>
+      <ngx-tile NgxCarouselItem>
+        <li [ngClass]="{'active': id === 7 }"  (click)="addClass(id=7)">
+          <span class="icon raza_reward_icon">
+            <img src="assets/images/raza_reward_icon_grey.svg" alt=""/>
+            <img src="assets/images/raza_reward_icon_white.svg" alt=""/>
+          </span>  
+          <span class="text">Raza Rewards</span>
+        </li>
+      </ngx-tile>
+
+    <button NgxCarouselPrev class='leftRs' (click)="moveHeaderToLeft()"><img src="assets/images/small_left_arrow.svg" alt=""></button>
+    <button NgxCarouselNext class='rightRs' (click)="moveHeaderToRight()"><img src="assets/images/small_right_arrow.svg" alt=""/></button> 
+  </ngx-carousel>
+</ul>
+
+</div>
+
+
+<div class="contentAreaFeatures">
+  <div class="container">
+<ngx-carousel
+  [inputs]="contentCTile" 
+  [moveToSlide]="slideIndex" 
+  (onMove)="onmoveFn($event)" 
+  (afterCarouselViewed)="afterCarouselViewedFn($event)" 
+  (carouselLoad)="carouselTileLoad($event)">
+
+    <ngx-tile NgxCarouselItem>
+      <div class="container">
+        <div class="row">
+          <div class="commonLeftAreaFeatures">
+            <div class="commonLeftArea">
+                <div class="commonIcon">
+                  <img src="assets/images/blue_big_icon.svg" alt=""/>
+                </div>
+                <div class="commonContentArea">
+                  <h2>One Touch Dialing</h2>
+                  <p>Call any international number with the touch of a button</p>
+                  <ul class="commonUl">
+                    <li 
+                      matTooltip="It’s Free"
+                      matTooltipPosition="above" TooltipVisibility="visible">
+                      <img src="assets/images/free_tag_icon.svg" alt=""/>
+                      <img src="assets/images/free_tag_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="As easy as making a local call"
+                      matTooltipPosition="above">
+                      <img src="assets/images/call_made_icon.svg" alt=""/>
+                      <img src="assets/images/call_made_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Pick your favorite number from a huge database"
+                      matTooltipPosition="above">
+                      <img src="assets/images/list_icon.svg" alt=""/>
+                      <img src="assets/images/list_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Call any country in the world with one touch dial"
+                      matTooltipPosition="above">
+                      <img src="assets/images/global_icon.svg" alt=""/>
+                      <img src="assets/images/global_icon_white.svg" alt=""/>
+                    </li>  
+                  </ul>
+                </div>
+            </div>
+            <div class="commonRightArea">
+              <div class="buttonArea">
+                  <button mat-button class="submitButtonSmall" (click)="setItUpNow()">Set it up now</button>
+                  <a class="howitworks" (click)="howItWorksPopup()">How it works?</a>
+                  <a class="howitworks" (click)="faqPopup()">FAQ</a> 
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </ngx-tile>
+
+    <ngx-tile NgxCarouselItem>
+      <div class="container">
+        <div class="row">
+          <div class="commonLeftAreaFeatures">
+            <div class="commonLeftArea">
+                <div class="commonIcon">
+                  <img src="assets/images/blue_big_icon.svg" alt=""/>
+                </div>
+                <div class="commonContentArea">
+                  <h2>Pin-Less</h2>
+                  <p>Register your calling from number and call direct by using Raza access number.</p>
+                  <ul class="commonUl">
+                    <li 
+                      matTooltip="No pin #’s to dial"
+                      matTooltipPosition="above">
+                      <img src="assets/images/no_pin_icon_grey.svg" alt=""/>
+                      <img src="assets/images/no_pin_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Just add your number and start calling"
+                      matTooltipPosition="above">
+                      <img src="assets/images/add_number_icon_grey.svg" alt=""/>
+                      <img src="assets/images/add_number_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Use any phone"
+                      matTooltipPosition="above">
+                      <img src="assets/images/use_phone_grey_icon.svg" alt=""/>
+                      <img src="assets/images/use_phone_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Register up to 5 numbers to pin-less."
+                      matTooltipPosition="above">
+                      <img src="assets/images/pin_5_icon.svg" alt=""/>
+                      <img src="assets/images/pin_5_icon_white.svg" alt=""/>
+                    </li>  
+                  </ul>
+                </div>
+            </div>
+            <div class="commonRightArea">
+              <div class="buttonArea">
+                  <button mat-button class="submitButtonSmall" (click)="setItUpNow()">Set it up now</button>
+                  <a class="howitworks" (click)="howItWorksPopup()">How it works?</a>
+                  <a class="howitworks" (click)="faqPopup()">FAQ</a> 
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </ngx-tile>
+
+
+    <ngx-tile NgxCarouselItem>
+      <div class="container">
+        <div class="row">
+          <div class="commonLeftAreaFeatures">
+            <div class="commonLeftArea">
+                <div class="commonIcon">
+                  <img src="assets/images/blue_big_icon.svg" alt=""/>
+                </div>
+                <div class="commonContentArea">
+                  <h2>Call Details</h2>
+                  <p>Keep track of your calls, view call details up to 60 days</p>
+                  <ul class="commonUl">
+                    <li 
+                      matTooltip="Total Transparency"
+                      matTooltipPosition="above">
+                      <img src="assets/images/total_transparency_icon.svg" alt=""/>
+                      <img src="assets/images/total_transparency_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Detailed breakdown of calls"
+                      matTooltipPosition="above">
+                      <img src="assets/images/breakdown_icon.svg" alt=""/>
+                      <img src="assets/images/breakdown_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Manage 24/7 , 365 Days"
+                      matTooltipPosition="above">
+                      <img src="assets/images/manage_24_icon.svg" alt=""/>
+                      <img src="assets/images/manage_24_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Available 60 days call history"
+                      matTooltipPosition="above">
+                      <img src="assets/images/always_available_icon.svg" alt=""/>
+                      <img src="assets/images/always_available_icon_white.svg" alt=""/>
+                    </li>  
+                  </ul>
+                </div>
+            </div>
+            <div class="commonRightArea">
+              <div class="buttonArea">
+                  <button mat-button class="submitButtonSmall"  (click)="setItUpNow()">Set it up now</button>
+                  <a class="howitworks" (click)="howItWorksPopup()">How it works?</a>
+                  <a class="howitworks" (click)="faqPopup()">FAQ</a>  
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </ngx-tile>
+
+
+    <ngx-tile NgxCarouselItem>
+      <div class="container">
+        <div class="row">
+          <div class="commonLeftAreaFeatures">
+            <div class="commonLeftArea">
+                <div class="commonIcon">
+                  <img src="assets/images/blue_big_icon.svg" alt=""/>
+                </div>
+                <div class="commonContentArea">
+                  <h2>100% Money Back</h2>
+                  <p>We sell our product with utmost confidence; so we give 100% money back. Get your free trial today and try us out.</p>
+                  <ul class="commonUl">
+                    <li 
+                      matTooltip="Get full refund"
+                      matTooltipPosition="above">
+                      <img src="assets/images/full_refund_icon.svg" alt=""/>
+                      <img src="assets/images/full_refund_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Best quality guaranteed"
+                      matTooltipPosition="above">
+                      <img src="assets/images/best_quality_icon.svg" alt=""/>
+                      <img src="assets/images/best_quality_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="No questions asked"
+                      matTooltipPosition="above">
+                      <img src="assets/images/no_question_icon.svg" alt=""/>
+                      <img src="assets/images/no_question_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Best service guaranteed"
+                      matTooltipPosition="above">
+                      <img src="assets/images/best_service_icon.svg" alt=""/>
+                      <img src="assets/images/best_service_icon_white.svg" alt=""/>
+                    </li>  
+                  </ul>
+                </div>
+            </div>
+            <div class="commonRightArea">
+              <div class="buttonArea">
+                  <button mat-button class="submitButtonSmall" (click)="setItUpNow()">Set it up now</button>
+                  <a class="howitworks" (click)="howItWorksPopup()">How it works?</a>
+                  <a class="howitworks" (click)="faqPopup()">FAQ</a>  
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </ngx-tile>
+
+
+    <ngx-tile NgxCarouselItem>
+      <div class="container">
+        <div class="row">
+          <div class="commonLeftAreaFeatures">
+            <div class="commonLeftArea">
+                <div class="commonIcon">
+                  <img src="assets/images/blue_big_icon.svg" alt=""/>
+                </div>
+                <div class="commonContentArea">
+                  <h2>Auto-Refill</h2>
+                  <p>Insufficient credit? No more worries!</p>
+                  <ul class="commonUl">
+                    <li 
+                      matTooltip="Auto-refill at low balance"
+                      matTooltipPosition="above">
+                      <img src="assets/images/auto_refil_icon.svg" alt=""/>
+                      <img src="assets/images/auto_refil_icon_white2.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Easy to manage online"
+                      matTooltipPosition="above">
+                      <img src="assets/images/easy_manage_icon.svg" alt=""/>
+                      <img src="assets/images/easy_manage_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Save time"
+                      matTooltipPosition="above">
+                      <img src="assets/images/save_time_icon.svg" alt=""/>
+                      <img src="assets/images/save_time_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Get bonus minutes on every recharge"
+                      matTooltipPosition="above">
+                      <img src="assets/images/get_bonus_icon.svg" alt=""/>
+                      <img src="assets/images/get_bonus_icon_white.svg" alt=""/>
+                    </li>  
+                  </ul>
+                </div>
+            </div>
+            <div class="commonRightArea">
+              <div class="buttonArea">
+                  <button mat-button class="submitButtonSmall" (click)="setItUpNow()">Set it up now</button>
+                  <a class="howitworks" (click)="howItWorksPopup()">How it works?</a>
+                  <a class="howitworks" (click)="faqPopup()">FAQ</a> 
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </ngx-tile>
+
+
+    <ngx-tile NgxCarouselItem>
+      <div class="container">
+        <div class="row">
+          <div class="commonLeftAreaFeatures">
+            <div class="commonLeftArea">
+                <div class="commonIcon">
+                  <img src="assets/images/blue_big_icon.svg" alt=""/>
+                </div>
+                <div class="commonContentArea">
+                  <h2>Call Forwarding</h2>
+                  <p>Never miss a call even when travelling or on vacation, Forward your calls and receive it anywhere.</p>
+                  <ul class="commonUl">
+                    <li 
+                      matTooltip="Forward personal and business calls"
+                      matTooltipPosition="above">
+                      <img src="assets/images/forward_call_icon.svg" alt=""/>
+                      <img src="assets/images/forward_call_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Avoid roaming charges"
+                      matTooltipPosition="above">
+                      <img src="assets/images/avoid_roaming_icon.svg" alt=""/>
+                      <img src="assets/images/avoid_roaming_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Excellent Rates"
+                      matTooltipPosition="above">
+                      <img src="assets/images/excelent_rate_icon.svg" alt=""/>
+                      <img src="assets/images/excelent_rate_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Get personal 1-800 number"
+                      matTooltipPosition="above">
+                      <img src="assets/images/get_personal_1800_icon.svg" alt=""/>
+                      <img src="assets/images/get_personal_1800_icon_white.svg" alt=""/>
+                    </li>  
+                  </ul>
+                </div>
+            </div>
+            <div class="commonRightArea">
+              <div class="buttonArea">
+                  <button mat-button class="submitButtonSmall" (click)="setItUpNow()">Set it up now</button>
+                  <a class="howitworks" (click)="howItWorksPopup()">How it works?</a>
+                  <a class="howitworks" (click)="faqPopup()">FAQ</a> 
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </ngx-tile>
+
+
+    <ngx-tile NgxCarouselItem>
+      <div class="container">
+        <div class="row">
+          <div class="commonLeftAreaFeatures">
+            <div class="commonLeftArea">
+                <div class="commonIcon">
+                  <img src="assets/images/blue_big_icon.svg" alt=""/>
+                </div>
+                <div class="commonContentArea">
+                  <h2>Raza Rewards</h2>
+                  <p>It’s never too late, enroll to Raza rewards today and get free minutes.</p>
+                  <ul class="commonUl">
+                    <li 
+                      matTooltip="Free 200 bonus points"
+                      matTooltipPosition="above">
+                      <img src="assets/images/free_bonus_icon.svg" alt=""/>
+                      <img src="assets/images/free_bonus_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Refer a friend and earn 250 points"
+                      matTooltipPosition="above">
+                      <img src="assets/images/refer_friend_icon.svg" alt=""/>
+                      <img src="assets/images/refer_friend_icon_white.svg" alt=""/>
+                    </li>
+                    <li 
+                      matTooltip="Earn 4 points on every $ spent"
+                      matTooltipPosition="above">
+                      <img src="assets/images/earn_points_4_icon.svg" alt=""/>
+                      <img src="assets/images/earn_points_4_icon_white.svg" alt=""/> 
+                    </li>
+                    <li 
+                      matTooltip="Combine your points and redeem for free mins"
+                      matTooltipPosition="above">
+                      <img src="assets/images/free_mins_icon.svg" alt=""/>
+                      <img src="assets/images/free_mins_icon_white.svg" alt=""/>  
+                    </li>  
+                  </ul>
+                </div>
+            </div>
+            <div class="commonRightArea">
+              <div class="buttonArea">
+                  <button mat-button class="submitButtonSmall" (click)="setItUpNow()">Set it up now</button>
+                  <a class="howitworks" (click)="howItWorksPopup()">How it works?</a>
+                  <a class="howitworks" (click)="faqPopup()">FAQ</a>  
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </ngx-tile>
+
+  <button NgxCarouselPrev class='leftCRs' (click)="moveHeaderToLeft2()">
+    <img src="assets/images/big_left_arrow.svg" alt="">
+  </button>
+  <button NgxCarouselNext class='rightCRs' (click)="moveHeaderToRight2()">
+    <img src="assets/images/big_right_arrow.svg" alt=""> 
+  </button>
+</ngx-carousel>
+</div>
+</div>
+
+</div>
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>

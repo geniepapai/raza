@@ -1,0 +1,150 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<h1 class="heading_style1">	
+About Raza<br/>
+<span>The Industry Leader in International Calling Plans, Raza Keeps You Talking.</span>
+</h1>
+<div class="home_banner about_banner">
+    <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+</div>
+</div>
+
+<div class="second_fold">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 aboutusCont">
+					<h5>About Us</h5>
+				</div>
+				<div class="col-md-8 aboutusCont">
+					<p>Since 1995, we’ve been the industry pioneer, creating reliable and affordable international calling plans that keep you talking for less. Staying connected in today’s fast-paced world is easy when you get an international calling plan from Raza.com. Our state-of-the-art fiber optic network puts you in touch with more than 200 different countries. We stand behind every purchase to provide Unparalled customer service 24/7 & 100% money back guarantee if you are not satisfied with our service and quality at anytime.</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+<div class="aboutUsblueArea">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-4 three_service">
+              <div class="icon_holder1"><img src="assets/images/about_icon1.png" alt="icon"></div>
+              <h3>Talk More Spend Less</h3>
+              <p>Our rates are very competitive, we make every effort not to match but beat the market prices so you can talk more for less.</p>
+            </div>
+            <div class="col-md-4 three_service tab2Service">
+              <div class="icon_holder1"><img src="assets/images/about_icon2.png" alt="icon"></div>
+              <h3>Exceptional Call Quality</h3>
+              <p>Our State of the art fiber optic network will enable you to make high quality calls to anywhere in the world.</p>
+            </div>
+            <div class="col-md-4 three_service tab3Service">
+              <div class="icon_holder1"><img src="assets/images/about_icon3.png" alt="icon"></div>
+              <h3>100% Money Back Guarantee</h3>
+              <p>Get your unused balance refunded at any time if you are not completed satisfied with our Product, quality or Price.</p>
+            </div>
+          </div>
+        </div>
+</div>
+
+<div class="second_fold">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 aboutusCont">
+					<h5>Raza’s Features Outshine the Competition</h5>
+				</div>
+				<div class="col-md-8 aboutusCont">
+					<p>Raza leads the world in international calling plans with popular features to make it easier for you to manage your calls. We’re working to add new features every day. Manage your account online with our user-friendly interface, and get special offers and exclusive deals directly from Raza.</p>
+          <p>Still not convinced? If you find a prepaid international calling plan at a lower price than ours, we’ll beat it! Sign up online now and start saving on your international calls with Raza.com</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+</div>
+
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>

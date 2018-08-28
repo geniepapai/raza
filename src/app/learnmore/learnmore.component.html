@@ -1,0 +1,259 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>  
+
+
+<div class="home_banner learnmore_banner">
+    <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+</div>
+</div>
+
+<!-- common wrapper -->
+  <div class="commonWrapperArea learnmore">
+      <div class="bonusArea">
+          <span class="regularminTxt">Regular mins</span>
+          <span class="relative">
+            <mat-slide-toggle>PROMO MINS</mat-slide-toggle><img class="i_icon"  matTooltip="Lorem ipsum dolor sit amet, telloines consectetur adipiscing elit, sed do cani eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim demi veniam." matTooltipPosition="right" src="assets/images/i_icon.png" alt=""/>
+          </span>
+          <!-- <span class="bonusMin">10% Bonus mins</span> -->
+      </div>
+      <div class="callRate">
+        <span>Call Nigeria</span> <img src="assets/images/nigeria_map.jpg" alt="" /> <span>8.2¢ / min</span>
+      </div>
+
+      <ul class="learnmoreUl">
+        <li>
+           <span class="radio"><mat-radio-button value="1"></mat-radio-button></span> 
+           <div class="radioValueLearnmore">
+             <span>$10</span>
+             <span><strong>140</strong> mins</span>
+           </div>
+        </li>
+        <li>
+           <span class="radio"><mat-radio-button value="1"></mat-radio-button></span> 
+           <div class="radioValueLearnmore">
+             <span>$20</span>
+             <span><strong>356</strong> mins</span>
+           </div>
+        </li>
+      </ul>
+      
+
+      <div class="form_row1">      	
+        <div class="input_holder1">
+          <button mat-button class="submitButton">Buy Now</button> 
+        </div>
+      </div>
+
+      <div class="greyLinelearnmore"></div> 
+
+      <div class="learnCommonRow firstFirst">
+        <div class="background_area grey1">
+            <img src="assets/images/global_calling_image.png" alt=""/> 
+        </div>
+        <div class="text">
+          <h5>Global Calling</h5>
+          <p>Best Rates to call any Landlines and Cell phones worldwide! We believe in providing international calling at lowest possible rates so you can stay connected with your loved ones more frequently. </p>
+        </div>
+        
+      </div>
+
+      <div class="learnCommonRow SecondFirst">
+        <div class="background_area">
+            <img src="assets/images/call_quality_image.png" alt=""/> 
+        </div>
+        <div class="text text2">
+          <h5>Exceptional Call Quality</h5>
+          <p>Our State of the Art fiber optic network keeps you in touch by providing high quality calls to anywhere in the world.</p>
+        </div>
+        
+      </div>
+
+      <div class="learnCommonRow firstFirst">
+        <div class="background_area grey3">
+            <img src="assets/images/no_expiry_image.png" alt=""/> 
+        </div>
+        <div class="text">
+          <h5>No expiry date</h5>
+          <p>Not a frequent caller?  Not to worry! Your minutes will never expire with Raza communications. Just keep using your account at least once in 6 months so your account is active.</p>
+        </div>
+        
+      </div>
+
+      <div class="learnCommonRow SecondFirst">
+        <div class="background_area grey4">
+            <img src="assets/images/online_management_image.png" alt=""/> 
+        </div>
+        <div class="text text4"> 
+          <h5>Online Account Management</h5>
+          <p>Manage your account online 24/7. Gets full access to your account enabling you to view, edit and update your information anytime anywhere!</p>
+        </div>
+        
+      </div>
+      
+
+  </div>
+  <!-- common wrapper -->
+
+</div>
+
+<div class="benefitArea_learnmore">
+  <div class="container">
+    <form class="example-form">
+        <h2 class="heading_style2">Benefits</h2>
+        <p class="mainTxt">Partner up with Shoutem and deliver apps<br/> hat create vaulue for our customers</p> 
+        <div class="row">
+            <div class="col-sm-6 txtArea">
+                <h5>Lorem ipsum dolor</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                
+            </div>
+            <div class="col-sm-6 txtArea">
+                <h5>Lorem ipsum dolor</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+            </div>
+            <div class="col-sm-6 txtArea">
+                <h5>Lorem ipsum dolor</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+            </div>
+            <div class="col-sm-6 txtArea">
+                <h5>Lorem ipsum dolor</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+            </div>
+            <div class="col-sm-6 txtArea">
+                <h5>Lorem ipsum dolor</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+            </div>
+            <div class="col-sm-6 txtArea">
+                <h5>Lorem ipsum dolor</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+            </div>
+        </div>
+        
+    </form>
+  </div>
+</div>
+
+<div class="learnmore section_last_learnMore">
+
+    <div class="bonusArea">
+          <span class="regularminTxt">Regular mins</span>
+          <span class="relative">
+            <mat-slide-toggle>PROMO MINS</mat-slide-toggle><img class="i_icon"  matTooltip="Lorem ipsum dolor sit amet, telloines consectetur adipiscing elit, sed do cani eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim demi veniam." matTooltipPosition="right" src="assets/images/i_icon.png" alt=""/>
+          </span>
+          <!-- <span class="bonusMin">10% Bonus mins</span> -->
+      </div>
+      <div class="callRate">
+        <span>Call Nigeria</span> <img src="assets/images/nigeria_map.jpg" alt="" /> <span>8.2¢ / min</span>
+      </div>
+
+      <ul class="learnmoreUl">
+        <li>
+           <span class="radio"><mat-radio-button value="1"></mat-radio-button></span> 
+           <div class="radioValueLearnmore">
+             <span>$10</span>
+             <span><strong>140</strong> mins</span>
+           </div>
+        </li>
+        <li>
+           <span class="radio"><mat-radio-button value="1"></mat-radio-button></span> 
+           <div class="radioValueLearnmore">
+             <span>$20</span>
+             <span><strong>356</strong> mins</span>
+           </div>
+        </li>
+      </ul>
+      
+
+      <div class="form_row1">      	
+        <div class="input_holder1">
+          <button mat-button class="submitButton">Buy Now</button> 
+        </div>
+      </div>  
+
+</div>
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>

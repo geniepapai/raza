@@ -1,0 +1,271 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+<header class="header_style">
+ <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+
+</div>
+
+
+</div>
+
+
+<div class="recharge_block recharge2 overflowHidden">
+      <!--rechargeStep -->
+    <div class="rechargeStepMain">
+    <div class="rechargeStep">
+        <div class="step1">
+            <p class="step">Step 1</p>
+            <p class="stepName">Login</p>
+        </div>
+        <div class="step2 active">
+            <p class="step">Step 2</p>
+            <p class="stepName">Payment</p>
+        </div>
+        <div class="step3">
+            <p class="step">Step 3</p>
+            <p class="stepName">Confirmation</p>
+        </div>
+    </div>
+    </div>
+    <!-- rechargeStep -->
+      <p class="updateCard">Last step…</p>
+    	<div class="container containerMobile">
+        	<div class="row">
+            <div class="col-xl-6">
+                <div class="col-md-12">
+                    <h2 class="heading_style4">
+                        <span>Select payment method</span>
+                    </h2>
+                </div>
+                <div class="col-md-12">
+                <form>
+                <div class="form_holder form_holder2 creditCard_paypal">
+                    
+                	<mat-tab-group [selectedIndex]="1">
+                    <mat-tab label="Credit Card">
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-12">
+                                <label><!-- <span class="i_icon"><img src="assets/images/i_icon.png" alt=""/></span> --> <span class="floatRight"><img src="assets/images/credit_cards_icon.png" alt=""/></span></label>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Card Number" value="">
+                                    <span class="lock"><img src="assets/images/lock_icon.png" alt=""/></span>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-6">
+                                <div class="floatRight">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Month" [(value)]="selectedMonth">
+                                        <mat-option value="jan">Jan</mat-option>
+                                        <mat-option value="feb">Feb</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="floatRight">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Year" [(value)]="selectedYear">
+                                        <mat-option value="2020">2020</mat-option>
+                                        <mat-option value="2021">2021</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-6">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Security Code" value="">
+                                    <span class="lock"><img matTooltipPosition="right" matTooltip="Lorem ipsum dolor sit amet, telloines consectetur adipiscing elit, sed do cani eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim demi veniam." src="assets/images/info_icon.svg" alt=""/></span>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="greyLine"></div>
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-12">
+                                
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Name" value="">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-12">
+                                <label><span class="i_icon"><img matTooltipPosition="right" matTooltip="Lorem ipsum dolor sit amet, telloines consectetur adipiscing elit, sed do cani eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim demi veniam." src="assets/images/i_icon.png" alt=""/></span></label>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email" value=""> 
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-6">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Address" value="">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-6">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Zip/Postal code" value="">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-6">
+                                <mat-form-field>
+                                    <mat-select placeholder="City" [(value)]="selectedCity">
+                                    <mat-option value="kolkata">Kolkata</mat-option>
+                                    <mat-option value="chennai">Chennai</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-6">
+                                <mat-form-field>
+                                    <mat-select placeholder="Country" [(value)]="selectedCountry">
+                                    <mat-option value="india">India</mat-option>
+                                    <mat-option value="canada">Canada</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-12">
+                                <p class="labelText">Enable auto top up</p>
+                                <mat-slide-toggle></mat-slide-toggle>
+                                <p class="autoTxt">Automatically add $10 to my account when my balance falls below $2.</p>
+                            </div>
+                        </div>
+                        <div class="greyLine"></div>
+                        
+                        <div class="form_row1">
+                    	
+                            <div class="input_holder1">
+                              <button mat-button class="submitButton">Confirm</button> 
+                            </div>
+                        </div>
+                      
+                    </mat-tab>
+
+
+                    <mat-tab label="PayPal">
+                      <div class="row form_holder5Row">
+                            <div class="col-sm-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email" value="">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row form_holder5Row">
+
+                            <div class="col-sm-12">
+                                <div class="floatRight">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Country" [(value)]="selectedYear">
+                                        <mat-option value="india">India</mat-option>
+                                        <mat-option value="canada">Canada</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row1">
+                    	
+                            <div class="input_holder1">
+                              <button mat-button class="submitButton">Pay using paypal</button> 
+                            </div>
+                        </div>
+                    </mat-tab>
+                  </mat-tab-group>
+                </div>
+                </form>
+                </div>
+            </div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-5">
+              <div class="col-md-12">
+                    <h2 class="heading_style4">
+                        <span>Your order</span>
+                    </h2>
+                </div>
+            	<table class="table">
+                <tbody>
+                  <tr>
+                    <td>Nigeria - 170 mins</td> 
+                    <td>$15 / month</td>
+                  </tr>
+                  
+                  <tr class="total">
+                    <td>Total (USD)</td>
+                    <td>$20</td>
+                  </tr> 
+
+                  <!-- <tr class="autoTopup">
+                    <td>Auto top up</td>
+                    <td><i class="material-icons">check_circle</i>Enabled</td>
+                  </tr> -->
+
+                </tbody>
+              </table>
+              <a (click)="redeemPromo()" class="redeemPromo">Redeem promo code</a>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

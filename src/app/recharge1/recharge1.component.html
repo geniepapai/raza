@@ -1,0 +1,103 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+<header class="header_style">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+
+
+</header>
+
+
+</div>
+
+
+</div>
+
+
+<div class="selectRechargeamountMain">
+    <h1>Recharge</h1>
+    <div class="selectRechargeamount">
+      <p class="selectAmountText">Select Recharge Amount</p>
+      <div class="bonusArea"><span>10% Bonus mins</span><span class="relative"><mat-slide-toggle>PROMO MINS</mat-slide-toggle><img class="i_icon"  matTooltip="Lorem ipsum dolor sit amet, telloines consectetur adipiscing elit, sed do cani eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim demi veniam." matTooltipPosition="right" src="assets/images/i_icon.png" alt=""/></span></div>
+      <div class="selectRechargeAmnt">
+        <ul>
+            <li (click)="selectAmount(id = 1)" [ngClass]="{'active': id === 1 }">
+              <div class="commonpriceArea">
+                <p class="newPrice">$5</p>
+              </div>
+            </li>
+            <li (click)="selectAmount(id = 2)" [ngClass]="{'active': id === 2 }">
+              <div class="commonpriceArea">
+                <p class="newPrice">$10</p>
+              </div>
+            </li>
+            <li (click)="selectAmount(id = 3)" [ngClass]="{'active': id === 3 }">
+              <div class="commonpriceArea">
+                <p class="newPrice">$20</p>
+              </div>
+            </li>
+            <li (click)="selectAmount(id = 4)" [ngClass]="{'active': id === 4 }">
+              <div class="commonpriceArea">
+                <p class="oldPrice">$50</p>
+                <p class="newPrice">$45</p>
+              </div>
+            </li>
+        </ul>
+        
+      </div>
+      
+    </div>
+</div>
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

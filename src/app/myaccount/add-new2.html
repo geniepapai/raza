@@ -1,0 +1,43 @@
+<div class="form_holder commonPopup addEnroll">
+    <span class="closeIcon" (click)="closeIcon()"  mat-dialog-close><i class="material-icons">close</i></span>
+    <h2>Calling To information</h2>
+    <mat-dialog-content>
+    
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Country">
+                    <mat-option value="india">India</mat-option>
+                    <mat-option value="usa">USA</mat-option>
+                </mat-select>
+            </mat-form-field>    
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field>
+                <input matInput placeholder="City Code + Phone#">
+            </mat-form-field>   
+        </div>
+    </div>
+
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field>
+                <input matInput placeholder="Code">
+            </mat-form-field>    
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field>
+                <input matInput placeholder="Ref. Names">
+            </mat-form-field>    
+        </div>
+    </div>
+    
+    <div class="form_row1">
+        
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Add</button> 
+        </div>
+    </div>
+    </mat-dialog-content>
+    
+</div>

@@ -1,0 +1,44 @@
+<div class="form_holder commonPopup">
+    <span class="closeIcon" (click)="closeIcon()"  mat-dialog-close><i class="material-icons">close</i></span>
+    <h2>Add New Card</h2>
+    <mat-dialog-content>
+    <div class="row commonPopupRow">
+        <div class="col-sm-8">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Card Number" value="">
+            </mat-form-field>   
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="CVV" value="">
+            </mat-form-field>   
+        </div>
+    </div>
+    
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field>
+            <mat-select placeholder="Expiry Month">
+                <mat-option value="jan">Jan</mat-option>
+                <mat-option value="feb">Feb</mat-option>
+            </mat-select>
+            </mat-form-field>  
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field>
+            <mat-select placeholder="Expiry Year">
+                <mat-option value="2019">2019</mat-option>
+                <mat-option value="2020">2020</mat-option>
+            </mat-select>
+            </mat-form-field>
+        </div>
+    </div> 
+
+    <div class="form_row1">
+        
+        <div class="input_holder1"> 
+            <button mat-button class="submitButton" (click)="nextBillingAddress()">Next</button> 
+        </div>
+    </div>
+    </mat-dialog-content>
+</div>

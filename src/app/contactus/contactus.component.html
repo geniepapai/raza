@@ -1,0 +1,342 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+  <div class="first_fold">
+
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+    <h1 class="heading_style1">	
+    Contact Us<br/>
+    <span>Reach Us Anytime 24/7, 365 Days...!</span>
+    </h1>
+    <div class="home_banner contactus_banner">
+        <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+    </div>
+  </div>
+  <!-- common wrapper -->
+  <div class="contactusWrapper">
+
+      <div class="mainContactArea">
+        <!-- Common Contact -->
+        <div class="commonContact">
+          <div class="chatIcon"><img src="assets/images/contactus_chaticon.png" alt=""/></div>
+          <h3>Chat</h3>
+          <p>Talk to a human not a bot.<br/>Anywhere! Anytime!</p>
+          <div class="link"><a>Chat with us <img src="assets/images/arrow_icon.svg" alt=""/></a></div>
+        </div>
+        <!-- Common Contact -->
+
+        <!-- Common Contact -->
+        <div class="commonContact">
+          <div class="chatIcon"><img src="assets/images/contactus_call_icon.png" alt=""/></div>
+          <h3>Call</h3>
+          <p>We’re here to help with<br/> any questions you have.</p>
+          <div class="link"><a  mat-button (click)="chatWithUs()">Call us <img src="assets/images/arrow_icon.svg" alt=""/></a></div> 
+        </div>
+        <!-- Common Contact -->
+
+        <!-- Common Contact -->
+        <div class="commonContact">
+          <div class="chatIcon"><img src="assets/images/contact_us_message_icon.png" alt=""/></div>
+          <h3>Message</h3>
+          <p>Support@raza.com<br/> Info@raza.com</p>
+          <div class="link"><a (click)="messageUs()">Message us <img src="assets/images/arrow_icon.svg" alt=""/></a></div>
+        </div>
+        <!-- Common Contact -->
+      </div>
+     
+     <!-- 
+      <div class="mainContactArea showInmobile">
+        
+        <carousel class="mobileContentSlider">
+            <slide>
+              
+              <div class="commonContact">
+                <div class="chatIcon"><img src="assets/images/contactus_chaticon.png" alt=""/></div>
+                <h3>Chat</h3>
+                <p>Talk to a human not a bot.<br/>Anywhere! Anytime!</p>
+                <div class="link"><a>Chat with us <img src="assets/images/arrow_icon.svg" alt=""/></a></div>
+              </div>
+              
+            </slide>
+            <slide>
+              
+              <div class="commonContact">
+                <div class="chatIcon"><img src="assets/images/contactus_call_icon.png" alt=""/></div>
+                <h3>Call</h3>
+                <p>We’re here to help with<br/> any questions you have.</p>
+                <div class="link"><a  mat-button (click)="chatWithUs()">Call us <img src="assets/images/arrow_icon.svg" alt=""/></a></div> 
+              </div>
+              
+            </slide>
+            <slide>
+                
+                <div class="commonContact">
+                  <div class="chatIcon"><img src="assets/images/contact_us_message_icon.png" alt=""/></div>
+                  <h3>Message</h3>
+                  <p>Support@raza.com<br/> Info@raza.com</p>
+                  <div class="link"><a (click)="messageUs()">Message us <img src="assets/images/arrow_icon.svg" alt=""/></a></div>
+                </div>
+                
+            </slide>
+        </carousel>
+        
+
+      </div> -->
+
+      
+
+  </div>
+  <!-- common wrapper -->
+
+  <div class="clearDiv"></div>
+
+  <!-- accordion area -->
+    <div class="mobileTopAccordion contactus">
+    <h2>Your question may also be answered on our FAQ page</h2>
+    <div class="headingText">FAQ'S (Most Common Questions)</div>
+    <ngb-accordion>
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>How do I access my account online?
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="aboutusCont">
+            <p>Use your registered email address and the password to login to your account. A total user friendly design will help you view and edit all your features.</p>
+            <p></p>
+          </div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>I lost the password to My Account. How do I get it back?
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent> 
+            <div class="aboutusCont">
+            <p>Click the link "Forget your Password - Click Here" link under the username and password box on the login page and your password will be e-mailed to you promptly.</p>
+            <p></p>
+          </div>
+          </ng-template>
+        </ngb-panel>
+
+    </ngb-accordion> 
+
+    <div class="headingText">Calling</div>
+
+  <ngb-accordion>        
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>Lorem ipsum dolor sit amet consectetur adipiscing elit?
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="aboutusCont">
+            <p>Click the link "Forget your Password - Click Here" link under the username and password box on the login page and your password will be e-mailed to you promptly.</p>
+            <p></p>
+          </div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>Aenean ultrices ante nunc vel ultricies risus gravida vel?
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="aboutusCont">
+            <p>Click the link "Forget your Password - Click Here" link under the username and password box on the login page and your password will be e-mailed to you promptly.</p>
+            <p></p>
+          </div>
+          </ng-template>
+        </ngb-panel>
+
+  </ngb-accordion>
+
+ <div class="headingText">My Account</div>
+  <ngb-accordion>
+        
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>Lorem ipsum dolor sit amet consectetur adipiscing elit?
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="aboutusCont">
+            <p>Click the link "Forget your Password - Click Here" link under the username and password box on the login page and your password will be e-mailed to you promptly.</p>
+            <p></p>
+          </div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>Aenean ultrices ante nunc vel ultricies risus gravida vel?
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="aboutusCont">
+            <p>Click the link "Forget your Password - Click Here" link under the username and password box on the login page and your password will be e-mailed to you promptly.</p>
+            <p></p>
+          </div>
+          </ng-template>
+        </ngb-panel>
+  </ngb-accordion>
+
+  <div class="headingText">Billing/Payment</div>
+  <ngb-accordion>
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>Lorem ipsum dolor sit amet consectetur adipiscing elit?
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="aboutusCont">
+            <p>Click the link "Forget your Password - Click Here" link under the username and password box on the login page and your password will be e-mailed to you promptly.</p>
+            <p></p>
+          </div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>Aenean ultrices ante nunc vel ultricies risus gravida vel?
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="aboutusCont">
+            <p>Click the link "Forget your Password - Click Here" link under the username and password box on the login page and your password will be e-mailed to you promptly.</p>
+            <p></p>
+          </div>
+          </ng-template>
+        </ngb-panel> 
+
+        
+      </ngb-accordion>
+  </div>
+  <!-- accordion area -->
+
+  <!-- green area -->
+  <div class="greenArea">
+     <div class="officeAddress">
+       <div class="officeAddLeft">
+          <div class="contactAdd borderLeft">
+              <p class="heading">Our Head Office</p>
+              <p>Raza Telecom</p>
+              <p>N. Harlem Ave.</p>
+              <p>Chicago, IL 60656, U.S.A</p>
+          </div>
+          <div class="contactAdd">
+              <p class="heading">Our Corporate Office</p>
+              <p>Raza Communication</p>
+              <p>991 Albion Road.</p>
+              <p>Etobicoke, ON M9V 1A6, Canada</p>
+          </div>
+       </div>
+       <div class="officeAddRight">
+          <div class="contactAdd2 borderLeft">
+              <p class="heading">Fax us</p>
+              <p>United States</p>
+              <p>1-773-792-8291</p>
+          </div>
+          <div class="contactAdd2">
+              <p class="heading">&nbsp;</p>
+              <p>Canada</p>
+              <p>1-416-746-5239</p>
+          </div>
+       </div>
+     </div>
+  </div>
+  <!-- green area -->
+</div>
+
+
+<!--Footer-->
+<div>
+    <app-footer></app-footer>
+</div>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,168 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<h1 class="heading_style1">	
+Refer a Friend<br/>
+<span>Easy as 1 2 3 and earn points!</span>
+</h1>
+<div class="home_banner referafriend_banner"> 
+    <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+</div>
+</div>
+
+<div class="second_fold">
+		<div class="shadowtype2">
+			<div class="row">
+				<div class="col-md-4 howitworksSection number1">
+					<div class="icon_holder1"><img src="assets/images/howitworks_icon1.svg" alt="icon"></div>
+					<h3 class="heading_style2">Sign up</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+				</div>
+				<div class="col-md-4 howitworksSection number2">
+					<div class="icon_holder1"><img src="assets/images/howitworks_icon2.svg" alt="icon"></div>
+					<h3 class="heading_style2">Enter friend’s email</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+				</div>
+				<div class="col-md-4 howitworksSection number3">
+					<div class="icon_holder1"><img src="assets/images/howitworks_icon3.svg" alt="icon"></div>
+					<h3 class="heading_style2">Earn $10 FREE min</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+				</div>
+			</div>
+            <div class="row">
+                <div class="gradientArea">
+                <p>If you don't have an account please</p>
+                <div class="buttonArea">
+                    <button mat-button class="submitButton" >Sign up now</button> 
+                </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6 deals">
+                    <h3>Refer Friends & Earn Points!</h3>
+                    <p>Invitation e-mail will be send to your referred e-mails, to sign up and purchase one of our plans. Each successful sales converted from your referral will earn 250 points.</p>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Points</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1000</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <td>2000</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr class="total"> 
+                            <td>5000</td>
+                            <td>$50</td>
+                        </tr>
+                        
+                        </tbody>
+                    </table>
+                    <p class="text-center">A total of 1000 can earn you a $10 card.	</p>
+                    <p class="text-center">1 referal=250 points.</p>
+               </div>
+               <div class="col-md-6 deals">
+                   <h3>Track all of your referrals online!</h3>
+                   <p>You can view the status of your referrals, redeem your referral points and view redeem history under my account page. Points can be redeemed as soon as you reached a minimum of 1000 points which is applicable for a $10 card.</p>
+                   <p>Please note:</p>
+                   <p>Points cannot be converted into cash.</p>
+                   <p>Refer a friend applies for new account activation only</p>
+               </div> 
+            </div>
+		</div>
+</div>
+
+</div>
+
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>

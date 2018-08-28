@@ -1,0 +1,207 @@
+
+<mat-sidenav-container> 
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+  <div class="first_fold">
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+    <h1 class="heading_style1">	
+      FAQ's<br/>
+      <span>The Industry Leader in International Calling Plans, Raza Keeps You Talking.</span>
+    </h1>
+    <div class="home_banner faq_banner">
+        <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+    </div>
+  </div>
+  <!-- common wrapper -->
+  <div class="newcustomer deals faqContent faq2">
+      
+      <div class="headingText">What is the coupon code for Buy 1 Get 1 Offer?</div>
+      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>General
+              <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+            </span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="aboutusCont">
+            <p>For business professionals caught between high OEM price and mediocre print and graphic output, there’s a solution: Business Express’s Eclipse line of compatible laser toner cartridges that meet or exceed OEM quality for 20% less than typical OEM price. While even brand name OEMs display “This cartridge may contain recycled components” on packaging, only Business Express, a leading U.S.-based toner cartridge remanufacturer, uses all new internal components on its Eclipse line of compatible toner cartridges, and offers a guaranty on the cartridge and printer.</p>
+
+          </div>
+          </ng-template>
+        </ngb-panel>
+
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span>Definitions
+                <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+              </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <div class="aboutusCont">
+                  <p>"You" and "Your" mean the purchaser and/or the user of the Products (as defined below). "Raza.com," "We," "Our," and "Us" mean Raza.communications and any Raza.com affiliates authorized to sell and/or distribute the Products. "Product" or "Products" means any and all Products you purchase and/or use from the Raza.com Website now or in the future. "Raza.communications Website" is found at www.Raza.com and contains the specific prices and charges, Product descriptions and other terms and conditions not set forth here that apply to the Products. You can also request information about the specific prices and charges, Product descriptions and other terms and conditions not set forth here that apply to the Products by calling Raza.com toll free at 1-877-463-4233.</p>
+                  <p>This Agreement incorporates by reference to a Product's prices, charges, restrictions and the terms and conditions for such Product listed on our website, as well as any disclosures, provisions, limitations or other information provided with, or printed on, the Products.</p>
+              </div>
+            </ng-template>
+        </ngb-panel>
+        
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span>What is the time period for Buy 1 Get 1 Offer?
+                <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+              </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <div class="aboutusCont">
+                <p>Raza.com uses a 1 minute rounding interval. This means that the duration of each call is rounded up to the next full minute for billing purposes. In contrast, many prepaid phone cards use a 3 or 6 minute rounding interval where calls are rounded up in 3 or 6 minute intervals for billing purposes.</p>
+              </div>
+            </ng-template>
+        </ngb-panel>
+
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span>3 Simple Ways To Save A Bunch Of Money When Buying A New Computer
+                <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+              </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <div class="aboutusCont">
+                <p>All of Raza.com's Products, trademarks, service marks, symbols, logos and the intellectual property rights thereto (collectively "Marks") are the property of Raza.communications or its affiliates and You shall have no right in or to the Marks or any right to use the Marks. You are not permitted to commercially re-sell the Products or to print, produce, sell or distribute any telecommunication products that use or are based upon the Products, the telecommunication services provided with the Products and/or the Marks.</p>
+              </div>
+            </ng-template>
+        </ngb-panel>
+
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span>Choosing The Best Audio Player Software For Your Computer
+                <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+              </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <div class="aboutusCont">
+                <p>You agree that Raza.com shall not be responsible for any third party claims against Us that arise from Your purchase or use of the Products. Further, You agree to reimburse Raza.com for all costs and expenses related to the defense of any such claims, including any type of fee, unless such claims are based upon Our willful misconduct or gross negligence. This provision will continue to remain in force after the Agreement expires or is otherwise terminated.</p>
+              </div>
+            </ng-template>
+        </ngb-panel>
+
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span>Dealing With Technical Support 10 Useful Tips
+                <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+              </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <div class="aboutusCont">
+                
+                <p>Raza.com will not be liable for the liabilities whatsoever resulting due to registration of hotel/hostel/public phone numbers or otherwise any claims by you or third parties.</p>
+              </div>
+            </ng-template>
+        </ngb-panel>
+
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span>Help Finding Information Online
+                <i class="material-icons first-child">add</i> <i class="material-icons second-child">maximize</i>
+              </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <div class="aboutusCont">
+                <p>Raza.communications does not guarantee call quality or connectivity, and will not be responsible or liable for reimbursement of lost minutes or reduction in the stored value of any prepaid card. Connection to a wrong number is a valid call. Service outages extending over few hours to a couple of days may occur. Raza.communications will not be liable for such outages, and customers shall have no right to any refund, credit, compensation or damages from Raza.communications because of service outage or any other situation arising out of service outage.</p>
+                
+              </div>
+            </ng-template>
+        </ngb-panel>
+
+      </ngb-accordion>
+      
+      
+
+  </div>
+  <!-- common wrapper -->
+</div>
+
+
+<!--Footer-->
+<div class="footerMargin">
+    <app-footer></app-footer>
+</div>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

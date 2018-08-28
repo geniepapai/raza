@@ -1,0 +1,38 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hideinMobile{display: block;}
+.showInmobile { display: none;}
+
+.mat-toolbar{ background: none;}
+.nobg{ background: none; cursor: pointer; border:none;} 
+.howitworksSection{ text-align: left;padding: 6px 20px 30px 85px;}
+.howitworksSection h3.heading_style2{ color: #103F8A; font-size: 18px; font-family: 'Montserrat', sans-serif; font-weight: 500; text-align: left; }
+.howitworksSection p{/* color:#919EAF; */ color: #333; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: 400;}
+
+.second_fold{ padding-top: 0px; position: relative;}
+.shadowtype2{width: 90%; margin: 0 auto; padding:60px 10px; max-width: 1200px;}
+.gradientArea{background: #04A5F6; background: linear-gradient(to right, #04A5F6 , #0367DE ); padding: 30px 0; width: 100%; }
+.gradientArea p{ color: #fff; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: 400; text-align: center; margin: 0px; }
+.number2 p{ margin-bottom: 0px;}
+.number2 p.first-child{ border-bottom: 1px solid #E2E7ED; padding-bottom: 10px; margin-bottom: 10px;}
+.number2 p.last-child{ font-style: italic;} 
+
+
+
+
+@media only screen and (max-width: 650px)  {
+  
+  .gradientArea{ padding: 30px 20px;}
+  .hideinMobile{display: none;}
+  .showInmobile { display: block;}
+  .shadowtype2{ padding: 20px 0 !important;}
+  .howitworksSection{ padding: 61px 20px 25px 11px; background-position: center top;} 
+  .three_service{ height: 360px;}
+  .second_fold{ padding: 30px 40px;}
+}

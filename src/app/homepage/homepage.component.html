@@ -1,0 +1,428 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+
+<div class="home_textarea">
+  <h1>Talk, text & video chat</h1>
+  <div class="home_line"></div>
+  <p>Enjoy 1 cent calling to over 60 countries</p>
+  <mat-form-field class="example-full-width">
+    <mat-icon matPrefix>search</mat-icon>   
+    <input type="tel" matInput placeholder="Where do you wish to call?">
+    
+  </mat-form-field>
+  <div class="app_list app_list2"> 
+    <ul>
+      <li>
+        <a href="#">
+          <img src="assets/images/icon_appstore.svg" alt="app">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/images/icon_googleplaystore.svg" alt="app">
+        </a>
+      </li>
+      
+      </ul>
+  </div>
+</div>
+<div class="home_banner homepage_banner">
+    <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+</div>
+</div>
+
+<div class="homepage_bluearea hideinMobile">
+  <div class="container">
+			<div class="row">
+          <div class="col-md-4 homeBluecommon">
+            <div class="icon_holder1"><img src="assets/images/mobile_topup_icon.svg" alt="icon"></div>
+            <h3>Mobile Topup</h3>
+            <p>Send minutes to over 300 carriers in 120<br/> countries</p>
+            <a>Learn More</a>
+          </div>
+          <div class="col-md-4 homeBluecommon">
+            <div class="icon_holder1"><img src="assets/images/call_africa_icon.svg" alt="icon"></div>
+            <h3>Call Africa</h3>
+            <p>Start making high quality calls to Africa<br/> for as low as 4c/min</p>
+            <a>Learn More</a>
+          </div>
+          <div class="col-md-4 homeBluecommon"> 
+            <div class="icon_holder1"><img src="assets/images/call_asia_icon.svg" alt="icon"></div>
+            <h3>Call Asia</h3>
+            <p>Start making high quality calls to Asia for<br/> as low as 1c/min</p>
+            <a>Learn More</a>
+          </div>
+			</div>
+
+  </div>
+</div>
+<div class="homepage_bluearea showInmobile">
+  <div class="container">
+      <div class="row">
+        <carousel class="mobileContentSlider">
+            <slide>
+              <div class="col-md-4 homeBluecommon">
+                <div class="icon_holder1"><img src="assets/images/mobile_topup_icon.svg" alt="icon"></div>
+                <h3>Mobile Topup</h3>
+                <p>Send minutes to over 300 carriers in 120 countries</p>
+                <a>Learn More</a>
+              </div>
+            </slide>
+            <slide>
+              <div class="col-md-4 homeBluecommon">
+                <div class="icon_holder1"><img src="assets/images/call_africa_icon.svg" alt="icon"></div>
+                <h3>Call Africa</h3>
+                <p>Start making high quality calls to Africa for as low as 4c/min</p>
+                <a>Learn More</a>
+              </div>
+            </slide>
+            <slide>
+              <div class="col-md-4 homeBluecommon"> 
+                <div class="icon_holder1"><img src="assets/images/call_asia_icon.svg" alt="icon"></div>
+                <h3>Call Asia</h3>
+                <p>Start making high quality calls to Asia for as low as 1c/min</p>
+                <a>Learn More</a>
+              </div>
+            </slide>
+        </carousel>
+      </div>
+  </div>
+</div>
+
+
+<div class="home_howitworksmain">
+		<div class="container">
+			<div class="row">
+        <p class="howitText">How it works</p> 
+				<h2 class="heading_style2">It’s super easy!</h2>
+				<div class="col-md-4">
+          <div class="home_howitworksSection shadow1">
+            <div class="icon_holder1"><img src="assets/images/pick_your_plan.svg" alt="icon"></div>
+            <h3 class="picktext">Pick your plan</h3>
+            <p>Search Rates to call anywhere
+  in the world and select Purchase amount.</p>
+          </div>
+				</div>
+				<div class="col-md-4">
+          <div class="home_howitworksSection shadow2">
+            <div class="icon_holder1"><img src="assets/images/create_account_icon.svg" alt="icon"></div>
+            <h3 class="createText">Create an account</h3>
+            <p>Signup using your Mobile number or Check Out as Guest if you like to try us.</p>
+          </div>
+				</div>
+				<div class="col-md-4">
+          <div class="home_howitworksSection shadow3">
+            <div class="icon_holder1"><img src="assets/images/start_calling_icon.svg" alt="icon"></div>
+            <h3 class="startTxt">Start calling!</h3>
+            <p>Dial your Raza access number and Start Making Calls. That’s it… Keep Talking!</p>
+          </div>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="mobileAppArea">
+  <div class="container">
+			<div class="row">
+        <div class="col-md-7">
+          <p class="mAppHowtxt">Raza</p>
+          <h3>Mobile App.</h3>
+          <div class="mobileAppcommon_area first">
+             <h4>Free Voice and Video Calling</h4>
+             <p>Make unlimited Voice and Video calling to any Raza to Raza contact worldwide. Just ask your friends & family to download the Raza app and start calling.</p>
+          </div>
+          <div class="mobileAppcommon_area second">
+             <h4>Text Messaging</h4>
+             <p>Send and receive messages instantly, share your happy moments by sending images or keeping everyone upto date.</p>
+          </div>
+          <div class="mobileAppcommon_area third">
+             <h4>Group Voice Calls</h4>
+             <p>Feel the togetherness by connecting your group of friends or Family members on one single call.</p>
+          </div>
+          <div class="mobileAppcommon_area">
+            <div class="app_list">
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="assets/images/icon_appstore.svg" alt="app">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/images/icon_googleplaystore.svg" alt="app">
+                  </a>
+                </li>
+                
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="mobileImageSliderMain"></div>
+            <carousel class="mobileImageSlider">
+              <slide>
+                <img src="assets/images/slide1.jpg" alt=""/>
+              </slide>
+              <slide>
+                <img src="assets/images/slide2.jpg" alt=""/>
+              </slide>
+              <slide>
+                <img src="assets/images/slide3.jpg" alt=""/> 
+              </slide>
+            </carousel>
+          
+        </div>
+			</div>
+  </div>
+</div>
+
+<div class="home_pageGreyarea">
+   <div class="container3"> 
+     <div class="row">
+      <div class="col-md-6">
+        <div class="commonGreyCont borderLeftNone">
+          <p>Unlimited Calling for only $9.99/Month</p>
+          <button mat-button class="submitButton">Read More</button> 
+        </div>
+        <div class="mobileLine"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="commonGreyCont">
+          <p>Signup and get upto 100 free mins </p>
+          <button mat-button class="submitButton">Get Free Trial</button> 
+        </div>
+        <div class="mobileLine"></div>
+      </div>
+     </div>
+   </div>
+
+</div>
+
+<div class="testimonial_area">  
+   <div class="testimonial_area_container">
+     <div class="testPadding">
+      <h3>Testimonials</h3>
+      <p>Our customers have something to say about us</p>
+     </div>
+     <div class="testiSliderContent hideinMobile">
+       <div class="container">
+          <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+              <div ngxSlickItem class="slide">
+                    <div class="testiSlider" [ngClass]="{'active': id === 1 }">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>UX designer</p>
+                    </div>
+              </div>
+              <div ngxSlickItem class="slide">
+                    <div class="testiSlider" [ngClass]="{'active': id === 1 }">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>UX designer</p>
+                    </div>
+              </div>
+              <div ngxSlickItem class="slide">
+                    <div class="testiSlider" [ngClass]="{'active': id === 1 }">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>UX designer</p>
+                    </div>
+              </div>
+              <div ngxSlickItem class="slide">
+                    <div class="testiSlider" [ngClass]="{'active': id === 1 }">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>UX designer</p>
+                    </div>
+              </div>
+              <div ngxSlickItem class="slide">
+                    <div class="testiSlider" [ngClass]="{'active': id === 1 }">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>UX designer</p>
+                    </div>
+              </div>
+              <div ngxSlickItem class="slide">
+                    <div class="testiSlider" [ngClass]="{'active': id === 1 }">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>UX designer</p>
+                    </div>
+              </div>
+              
+          </ngx-slick>
+          <div class="arrowArea"> 
+            <a class="leftArrow" (click)="slickModal.slickGoTo(1)"><i class="material-icons">chevron_left</i></a>
+            <a class="rightArrow" (click)="slickModal.slickGoTo(2)"><i class="material-icons">navigate_next</i></a>
+          </div>
+      </div>
+     </div>
+     <div class="showInmobile">
+
+          <carousel class="mobileContentSlider">
+                <slide>
+                  <div class="testiSlider active">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>UX designer</p>
+                    </div>
+                </slide>
+
+                <slide>
+                  <div class="testiSlider active">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>Java Developer</p>
+                    </div>
+                </slide>
+
+                <slide>
+                  <div class="testiSlider active">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clientImage">
+                      <img src="https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="activeArea">
+                      <h4>Jessica Smith</h4>
+                      <p>Python Developer</p>
+                    </div>
+                </slide>
+            </carousel>
+
+     </div>
+   </div>
+
+
+   
+</div>
+
+
+
+</div>
+
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>

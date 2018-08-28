@@ -1,0 +1,206 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+<header class="header_style">
+  
+ <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+
+
+</header>
+
+
+</div>
+
+
+</div>
+
+<div class="recharge_block recharge2 overflowHidden">
+    	<div class="container containerMobile">
+        	<div class="row">
+            <div class="col-xl-6">
+                <div class="col-md-12">
+                    <h2 class="heading_style4">
+                        <span>Select payment method</span>
+                    </h2>
+                </div>
+                <div class="col-md-12">
+                <form>
+                <div class="form_holder form_holder2 creditCard_paypal"> 
+                	<mat-tab-group>
+                    <mat-tab label="Credit Card">
+                        <mat-radio-group class="example-radio-group" name="cardNumber" [(ngModel)]="cardNumber">
+                        <div class="savedCard" [ngClass]="{'cardOpacity': cardNumber == 2 }">
+                          <mat-radio-button value="1">
+                              <div class="cardImg"><img src="assets/images/visa_card.png" alt=""/></div>
+                              <div class="cardDetails"> 
+                                <p class="cardNumber">Card Ending in … 7169</p>
+                                <p class="cardExpires">Expires 5/21<span><a href="#">Update Card/Billing Details</a></span></p>
+                              </div>
+
+                          </mat-radio-button>
+                          <div class="cvvCard" *ngIf="cardNumber == 1">
+                            <div class="col-sm-6">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Security code" value="">
+                                    <span class="lock"><img src="assets/images/lock_icon.png" alt=""/></span>
+                                    <!-- <span class="i_icon"><img src="assets/images/i_icon.png" alt=""/></span> -->
+                                </mat-form-field>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="savedCard" [ngClass]="{'cardOpacity': cardNumber == 1 }">
+                          <mat-radio-button value="2">
+                                <div class="cardImg"><img src="assets/images/master_card.png" alt=""/></div>
+                                <div class="cardDetails"> 
+                                  <p class="cardNumber">Card Ending in … 7169</p>
+                                  <p class="cardExpires">Expires 5/21<span><a href="#">Update Card/Billing Details</a></span></p>
+                                </div>
+                          </mat-radio-button>
+                          <div class="cvvCard" *ngIf="cardNumber == 2">
+                            <div class="col-sm-6">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Security code" value="">
+                                    <span class="lock"><img src="assets/images/lock_icon.png" alt=""/></span>
+                                    <!-- <span class="i_icon"><img src="assets/images/i_icon.png" alt=""/></span> -->
+                                </mat-form-field>
+                            </div>
+                          </div>
+                        </div>
+                        </mat-radio-group>
+                        <div class="form_row1">
+                    	
+                            <div class="input_holder1">
+                              <button mat-button class="submitButton">Confirm</button> 
+                            </div>
+                        </div>
+                      
+                    </mat-tab>
+                    <mat-tab label="PayPal">
+                        <div class="row form_holder5Row">
+                            <div class="col-sm-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email" value="">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row form_holder5Row">
+
+                            <div class="col-sm-12">
+                                <div class="floatRight">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Country" [(value)]="selectedYear">
+                                        <mat-option value="india">India</mat-option>
+                                        <mat-option value="canada">Canada</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row1">
+                    	
+                            <div class="input_holder1">
+                              <button mat-button class="submitButton">Pay using paypal</button> 
+                            </div>
+                        </div>
+                    </mat-tab>
+                  </mat-tab-group>
+                </div>
+                </form>
+                </div>
+            </div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-5">
+              <div class="col-md-12">
+                    <h2 class="heading_style4">
+                        <span>Your order</span>
+                    </h2>
+                </div>
+            	<table class="table">
+                <tbody>
+                  <tr>
+                    <td>Mobile Recharge</td>
+                    <td>$20</td>
+                  </tr>
+                  <tr>
+                    <td>Service Fee</td>
+                    <td>$0</td>
+                  </tr>
+                  <tr>
+                    <td>Amount Sent</td>
+                    <td>1000 INR</td>
+                  </tr>
+                  <tr>
+                    <td>Mobile Number</td>
+                    <td>5556667777</td>
+                  </tr>
+                  <tr>
+                    <td>Operator</td>
+                    <td>Rogers</td>
+                  </tr>
+                  <tr class="total">
+                    <td>Total (USD)</td>
+                    <td>$20</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <a href="#" class="redeemPromo">Redeem promo code</a>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

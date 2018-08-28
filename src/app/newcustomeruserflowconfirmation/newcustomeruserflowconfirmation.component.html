@@ -1,0 +1,179 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+<header class="header_style">
+ <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header> 
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="recharge_block recharge2">
+    <!--rechargeStep -->
+<div class="rechargeStepMain">
+  <div class="rechargeStep">
+    <div class="step1">
+        <p class="step">Step 1</p>
+        <p class="stepName">Login</p>
+    </div>
+    <div class="step2">
+        <p class="step">Step 2</p>
+        <p class="stepName">Payment</p>
+    </div>
+    <div class="step3 active">
+        <p class="step">Step 3</p> 
+        <p class="stepName">Confirmation</p>
+    </div>
+  </div>
+</div>
+<!-- rechargeStep -->
+      <div class="msgArea">
+        <p class="updateCard2">Confirmation</p>
+        <p class="paymentText">Payment successful!</p>
+      </div>
+    	<div class="container containerMobile">
+        	<div class="row">
+            <div class="col-xl-6">
+                <div class="col-md-12">
+                    <p class="emailText">Please find your order details below. An email has been sent to <strong>nagesh@raza.com.</strong></p>
+                </div>
+                <div class="col-md-12">
+                    
+                    <div class="form_holder form_holder2 form_holder5">
+                        <div class="orderNumberArea">
+                            <p>Your access number<span>1-647-050-0000</span></p>
+                        </div>
+                        <div class="emailSent">
+                          <ul>
+                            <li>Dial the Raza local access number.</li>
+                            <li>Dial 011 + the Country Code + the Phone Number followed by # key.</li>
+                            <li>Keep Talking!</li>
+                          </ul> 
+                          
+                        </div>
+                        <div class="orderconfirmationOr">OR</div> 
+                    </div>
+
+                    <div class="downloadApp">
+                          <h4 class="heading_style7">Download Raza mobile app and <br/>
+          start calling now!</h4>
+                          <div class="app_list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon_googleplaystore.png" alt="app"/>
+                                          </a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon_appstore.png" alt="app" />
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                    </div>
+
+                    <div class="live_chatarea">
+                        <ul>
+                          <li><a href="#"><span><img src="assets/images/user_icon.svg" alt=""/></span> My account</a></li>
+                          <li><a href="#"><span><img src="assets/images/chat_icon.svg" alt=""/></span> 24/7 Live Chat</a></li>
+                          <li><a href="#"><span><img src="assets/images/call_icon.svg" alt=""/></span> 1-877-463-4233</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-5">
+              <div class="col-md-12">
+                    <h2 class="heading_style4">
+                        <span>Order Summary</span>
+                    </h2>
+                </div>
+            	<table class="table">
+                <tbody>
+                  <tr>
+                    <td>Global call</td>
+                    <td>$10</td>
+                  </tr>
+                  <tr>
+                    <td>Service fee</td>
+                    <td>$1</td>
+                  </tr>
+                  
+                  <tr class="total">
+                    <td>Total</td>
+                    <td>$20</td>
+                  </tr>
+                  <tr class="total">
+                    <td>Order Id</td>
+                    <td class="productNumber">BR76F02EF808</td>
+                  </tr>
+                  <tr>
+                    <td>Date & time</td>
+                    <td>10/2/2017  12.44 PM</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

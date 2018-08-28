@@ -1,0 +1,13 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hideinMobile{display: block;}
+.showInmobile { display: none;}
+
+.mat-toolbar{ background: none;}
+.nobg{ background: none; cursor: pointer; border:none;}

@@ -1,0 +1,263 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+  <div class="first_fold">
+ <header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/homepage"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN0 nobg" mat-button [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+    
+    <div class="home_banner deal1_banner">
+        <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+    </div>
+  </div>
+  <!-- common wrapper -->
+  <div class="commonWrapperArea newcustomer deals">
+      <div class="commonWrapperAreaShadowArea">
+          <div class="coverShadow"></div>
+      </div>
+      <h2>Get Up To 1500 Free</h2>
+      <div class="dropDownArea">
+        <mat-form-field>
+            <mat-select placeholder="Select Country">
+                <mat-option value="india">India</mat-option>
+                <mat-option value="usa">USA</mat-option>
+            </mat-select>
+        </mat-form-field>
+      </div>
+
+      <mat-tab-group>
+            <mat-tab label="$20">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Free mins</th>
+                        <th scope="col">150</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Regular Mins</td>
+                        <td>1000</td>
+                      </tr>
+                      <tr>
+                        <td>Rate per minute</td>
+                        <td>1527</td>
+                      </tr>
+                      <tr class="total"> 
+                        <td>Total</td>
+                        <td>2733</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  <div class="buttonArea">
+                    <button mat-button class="submitButton" >Buy Now</button>
+                  </div>
+                  <div class="linethroughArea">
+                    <div class="line"></div>
+                    <span>FAQ’S</span>
+                  </div>
+                  <ngb-accordion #acc="ngbAccordion">
+
+                    <ngb-panel>
+                      <ng-template ngbPanelTitle>
+                        <span>Choosing The Best Audio Player Software For Your Computer
+                          <i class="material-icons">add</i> <i class="material-icons">maximize</i>
+                        </span>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        <div class="aboutusCont">
+                        <p>The provision of Services to you through the Website is subject to your acceptance of the Agreement. By completing the Registration Form and/or by using the Website, you expressly agree to be bound by the terms and conditions below, the Raza.com Privacy Policy, and any other terms and conditions of this Agreement. If you object to this Agreement or any subsequent modifications to it, or become dissatisfied with your membership of the Website in anyway, your only remedy is too immediately:</p>
+                        <p></p>
+                      </div>
+                      </ng-template>
+                    </ngb-panel>
+
+                    <ngb-panel>
+                        <ng-template ngbPanelTitle>
+                          <span>Help Finding Information Online
+                            <i class="material-icons">add</i> <i class="material-icons">maximize</i>
+                          </span>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                          <div class="aboutusCont">
+                              <p>"You" and "Your" mean the purchaser and/or the user of the Products (as defined below). "Raza.com," "We," "Our," and "Us" mean Raza.communications and any Raza.com affiliates authorized to sell and/or distribute the Products. "Product" or "Products" means any and all Products you purchase and/or use from the Raza.com Website now or in the future. "Raza.communications Website" is found at www.Raza.com and contains the specific prices and charges, Product descriptions and other terms and conditions not set forth here that apply to the Products. You can also request information about the specific prices and charges, Product descriptions and other terms and conditions not set forth here that apply to the Products by calling Raza.com toll free at 1-877-463-4233.</p>
+                              <p>This Agreement incorporates by reference to a Product's prices, charges, restrictions and the terms and conditions for such Product listed on our website, as well as any disclosures, provisions, limitations or other information provided with, or printed on, the Products.</p>
+                          </div>
+                        </ng-template>
+                    </ngb-panel>
+
+                    <ngb-panel>
+                        <ng-template ngbPanelTitle>
+                          <span>Dealing With Technical Support 10 Useful Tips
+                            <i class="material-icons">add</i> <i class="material-icons">maximize</i>
+                          </span>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                          <div class="aboutusCont">
+                              <p>"You" and "Your" mean the purchaser and/or the user of the Products (as defined below). "Raza.com," "We," "Our," and "Us" mean Raza.communications and any Raza.com affiliates authorized to sell and/or distribute the Products. "Product" or "Products" means any and all Products you purchase and/or use from the Raza.com Website now or in the future. "Raza.communications Website" is found at www.Raza.com and contains the specific prices and charges, Product descriptions and other terms and conditions not set forth here that apply to the Products. You can also request information about the specific prices and charges, Product descriptions and other terms and conditions not set forth here that apply to the Products by calling Raza.com toll free at 1-877-463-4233.</p>
+                              <p>This Agreement incorporates by reference to a Product's prices, charges, restrictions and the terms and conditions for such Product listed on our website, as well as any disclosures, provisions, limitations or other information provided with, or printed on, the Products.</p>
+                          </div>
+                        </ng-template>
+                    </ngb-panel>
+                    
+                  </ngb-accordion>
+
+                  
+            </mat-tab>
+            <mat-tab label="$50">
+              <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Refer-A-Friend Email</th>
+                        <th scope="col">Points</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>email@email.com</td>
+                        <td>1527</td>
+                      </tr>
+                      <tr>
+                        <td>email@email.com</td>
+                        <td>1527</td>
+                      </tr>
+                      <tr class="total"> 
+                        <td>Total Refer A Friend Points</td>
+                        <td>2733</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  <table class="showAlltable">
+                    <tr>
+                      <td><a href="#"></a></td>
+                      <td class="text-center"><a href="#">Show All</a></td>
+                      <td class="text-right"><a href="#">Redeem Now</a></td>
+                    </tr>
+                  </table> 
+            </mat-tab>
+            <mat-tab label="$100">
+              <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Rewards Points</th>
+                        <th scope="col">Points</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Total Raza Rewards & Trade Points:</td>
+                        <td>1527</td>
+                      </tr>
+                      <tr>
+                        <td>Total Raza Rewards & Trade Points:</td>
+                        <td>1527</td>
+                      </tr>
+                      <tr class="total"> 
+                        <td>Total Available Ponts</td>
+                        <td>2733</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  <table class="showAlltable">
+                    <tr>
+                      <td><a href="#"></a></td>
+                      <td class="text-center"><a href="#">Show All</a></td>
+                      <td class="text-right"><a href="#">Redeem Now</a></td>
+                    </tr>
+                  </table>
+            </mat-tab>
+          </mat-tab-group>
+      
+      
+
+  </div>
+  <!-- common wrapper -->
+</div>
+
+
+<!--Footer-->
+<div class="footerMargin">
+    <app-footer></app-footer>
+</div>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
+

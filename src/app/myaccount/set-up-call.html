@@ -1,0 +1,74 @@
+<div class="form_holder commonPopup addEnroll autoRefill">
+    <span class="closeIcon" (click)="closeIcon()"  mat-dialog-close><i class="material-icons">close</i></span>
+    <h2>Auto-refill</h2>
+    <mat-dialog-content>
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Select Your 1-800 Number">
+                    <mat-option value="india">1-80001223</mat-option>
+                    <mat-option value="canada">1-800-122677</mat-option>
+                </mat-select>
+            </mat-form-field>   
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field>
+                <mat-select placeholder="Select Country">
+                    <mat-option value="india">India</mat-option>
+                    <mat-option value="canada">Canada</mat-option>
+                    <mat-option value="usa">USA</mat-option>
+                </mat-select>
+            </mat-form-field>   
+        </div>
+    </div>
+
+    <div class="row commonPopPopupRow">
+        <div class="col-sm-12">
+            <p class="enterD">Enter Distination Number</p>
+        </div> 
+    </div>
+    
+    <div class="row commonPopupRow">
+        <div class="col-sm-2">
+            <mat-form-field class="example-full-width">
+                <input matInput type="number" placeholder="Country Code" value="" />
+            </mat-form-field>    
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width">
+                <input matInput type="number" placeholder="" value="" />
+            </mat-form-field>    
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker1" placeholder="Activation Date">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>   
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker2" placeholder="Expiry Date">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>   
+        </div>
+    </div>
+
+    <div class="row commonPopupRow">
+        <div class="col-sm-6">
+            <mat-form-field class="example-full-width">
+                <input matInput type="number" placeholder="Call Forwarding Number" value="" />
+            </mat-form-field>   
+        </div>
+        
+    </div>
+
+    </mat-dialog-content>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Submit</button> 
+        </div>
+    </div>
+    
+</div>

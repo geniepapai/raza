@@ -1,0 +1,1277 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+<header class="header_style">
+ <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite" routerLink="/deal1">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/homepage"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite" routerLink="/recharge1">RECHARGE</span>
+    <button class="matButtonBGN-next nobg" mat-button [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/>
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="myaccountTabArea"> 
+    <div class="onlySmallScreenAccount">
+        <div class="stickyMenu">
+          <h2 class="welcomeText">Hello, Nagesh</h2>
+          <div class="myAccountMobileSelect">
+            <mat-form-field>
+              <mat-select [(value)]="currentTab">
+                <mat-option value="recharge">Recharge</mat-option>
+                <mat-option value="plan">Plan Details</mat-option>
+                <mat-option value="paymentDetails">Payment Details</mat-option>
+                <mat-option value="pin">Pin - Less</mat-option>
+                <mat-option value="autoRefill">Auto - Refill</mat-option>
+                <mat-option value="oneTouchDial">One Touch Dial</mat-option>
+                <mat-option value="myProfile">My Profile</mat-option>
+                <mat-option value="callForward">Call Forwarding</mat-option>
+                <mat-option value="rewardsOverview">Rewards Overview</mat-option>
+                <mat-option value="internationalTopup">Internatioanl Topup</mat-option>
+                <mat-option value="virtual">Virtual Numbers</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="myAccountMobTabContArea">
+          <!-- recharge tab content -->
+          <div *ngIf="currentTab == 'recharge' " class="tabContentMyaccount">
+              <p class="tabTitle">Recharge</p> 
+              <div class="rechargeLeft">
+                <p class="commonTabText">My Plans</p>
+                <mat-form-field>
+                  <mat-select placeholder="One Touch Dial">
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="rechargeRight">
+                <p class="commonTabText">Current Balance</p>
+                <p class="currentBalance">$36.45</p>
+                <div class="input_holder1">
+                  <button mat-button class="submitButton">Recharge</button> 
+                </div>
+              </div>
+            </div>
+            <!-- recharge tab content -->
+
+            <!-- Plan details tab content -->
+            <div  *ngIf="currentTab == 'plan' " class="tabContentMyaccount planDetails">
+              <p class="tabTitle">Plan Details</p> 
+              <mat-tab-group>
+                <mat-tab label="Your Raza Numbers">
+                  <div class="razaNumberLeft">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">S.NO</th>
+                            <th scope="col">Access Number</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">4567465738</th>
+                            <td>416-567-3674</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4567465738</th>
+                            <td>416-567-3674</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4567465738</th>
+                            <td>416-567-3674</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4567465738</th>
+                            <td>416-567-3674</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                  </div>
+                  <div class="razaNumberRight">
+                    <div class="col-xl-12 text-center">
+                        <div class="razawebNumberRightApplinkArea">
+                        <h4 class="heading_style7">You can download our app to make calls directly from Raza app Contacts</h4>
+                        <div class="app_list">
+                              <ul>
+                                  <li>
+                                      <a href="#">
+                                          <img src="assets/images/icon_googleplaystore.svg" alt="app"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                          <img src="assets/images/icon_appstore.svg" alt="app" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <p class="disclaimer">DISCLAIMER: Two cent/min will be charged for using a Toll Free or 1-800 numbers. Customer is responsible for choosing access numbers that are local and free of charge. Contact your local telephone company to confirm that the number(s) that appear are both local and free of charge for you to call. Raza.com is Not responsible for any long distance phone charges from your primary service provider.</p>
+                </mat-tab>
+                <mat-tab label="Order History">
+                  <div class="greyBg">
+                  <table class="table greyBg orderHistory">
+                    <tbody>
+                      
+                      <tr>
+                        <td>My Plan</td>
+                        <td>India unlimited</td>
+                      </tr>
+                      <tr>
+                        <td>Date</td>
+                        <td>10/2/2017@4:23PM (CST)</td>
+                      </tr>
+                      <tr>
+                        <td>Amount</td>
+                        <td>$10 USD</td>
+                      </tr>
+                      <tr>
+                        <td>Balance</td>
+                        <td>$4.53</td>
+                      </tr>
+                      <tr>
+                        <td>Add Funds</td>
+                        <td><a>Recharge</a></td>
+                      </tr>
+                      <tr>
+                        <td>Pin Number</td>
+                        <td>992XXXXXX987</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>
+                  </div>
+                  <table class="table orderHistory">
+                    <tbody>
+                      
+                      <tr>
+                        <td>My Plan</td>
+                        <td>India unlimited</td>
+                      </tr>
+                      <tr>
+                        <td>Date</td>
+                        <td>10/2/2017@4:23PM (CST)</td>
+                      </tr>
+                      <tr>
+                        <td>Amount</td>
+                        <td>$10 USD</td>
+                      </tr>
+                      <tr>
+                        <td>Balance</td>
+                        <td>$4.53</td>
+                      </tr>
+                      <tr>
+                        <td>Add Funds</td>
+                        <td><a>Recharge</a></td>
+                      </tr>
+                      <tr>
+                        <td>Pin Number</td>
+                        <td>992XXXXXX987</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>  
+
+                  <a  routerLink="/plandetails" class="showFullHistory">Show Full History</a> 
+                  
+                </mat-tab>
+                <mat-tab label="Call Details">
+                  <div class="greyBg">
+                  <table class="table greyBg orderHistory">
+                    <tbody>
+                      
+                      <tr>
+                        <td>My Plan</td>
+                        <td>India unlimited</td>
+                      </tr>
+                      <tr>
+                        <td>Date</td>
+                        <td>10/2/2017@4:23PM (CST)</td>
+                      </tr>
+                      <tr>
+                        <td>Amount</td>
+                        <td>$10 USD</td>
+                      </tr>
+                      <tr>
+                        <td>Balance</td>
+                        <td>$4.53</td>
+                      </tr>
+                      <tr>
+                        <td>Add Funds</td>
+                        <td><a>Recharge</a></td>
+                      </tr>
+                      <tr>
+                        <td>Pin Number</td>
+                        <td>992XXXXXX987</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>
+                  </div>
+                  <table class="table orderHistory">
+                    <tbody>
+                      
+                      <tr>
+                        <td>My Plan</td>
+                        <td>India unlimited</td>
+                      </tr>
+                      <tr>
+                        <td>Date</td>
+                        <td>10/2/2017@4:23PM (CST)</td>
+                      </tr>
+                      <tr>
+                        <td>Amount</td>
+                        <td>$10 USD</td>
+                      </tr>
+                      <tr>
+                        <td>Balance</td>
+                        <td>$4.53</td>
+                      </tr>
+                      <tr>
+                        <td>Add Funds</td>
+                        <td><a>Recharge</a></td>
+                      </tr>
+                      <tr>
+                        <td>Pin Number</td>
+                        <td>992XXXXXX987</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>  
+
+                  <a routerLink="/plandetails" class="showFullHistory">Show Full History</a> 
+                </mat-tab>
+              </mat-tab-group>
+              
+            </div>
+            <!-- Plan details tab content -->
+
+
+            <!-- payment details tab content -->
+            <div *ngIf="currentTab == 'paymentDetails' " class="tabContentMyaccount paymentDetails">
+              <p class="tabTitle">Payment Details</p> 
+              <div class="paymentDetailsSavedcard">
+                    <div class="cardImg"><img src="assets/images/visa_card.png" alt=""/></div>
+                    <div class="cardDetails"> 
+                      <p class="cardNumber">Card Ending in … 7169</p>
+                      <p class="cardExpires">Expires 5/21</p>
+                      <p class="cardNumber"><span>Primary Card</span></p>
+                    </div>
+                    <button mat-icon-button [matMenuTriggerFor]="moreMenu">
+                      <mat-icon>more_horiz</mat-icon>
+                    </button>
+                    <mat-menu #moreMenu="matMenu">
+                      <button mat-menu-item>
+                        <span>Redial</span>
+                      </button>
+                      <button mat-menu-item>
+                        <span>Check voicemail</span>
+                      </button>
+                    </mat-menu>
+              </div>
+              <div class="paymentDetailsSavedcard">
+                    <div class="cardImg"><img src="assets/images/visa_card.png" alt=""/></div>
+                    <div class="cardDetails"> 
+                      <p class="cardNumber">Card Ending in … 7169</p>
+                      <p class="cardExpires">Expires 5/21</p>
+                    </div>
+                    <button mat-icon-button [matMenuTriggerFor]="moreMenu">
+                      <mat-icon>more_horiz</mat-icon>
+                    </button>
+                    <mat-menu #moreMenu="matMenu">
+                      <button mat-menu-item>
+                        <span>Redial</span>
+                      </button>
+                      <button mat-menu-item>
+                        <span>Check voicemail</span>
+                      </button>
+                    </mat-menu>
+              </div>
+              <div class="input_holder1">
+                  <button mat-button class="submitButton" (click)="addCardPopup()">ADD CARD</button> 
+              </div>
+              
+            </div>
+            <!-- payment details tab content -->
+
+
+            <!-- Number tab content -->
+            <div *ngIf="currentTab == 'pin' " class="tabContentMyaccount paymentDetails numberTabCont">
+              <p class="tabTitle">My Numbers</p> 
+              <div class="myNumberButtonArea">
+              <button mat-button class="submitButton">SHOW ALL</button> 
+              <button mat-button class="submitButton"  (click)="addNumber()">ADD A NUMBER</button> 
+              </div>
+              <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Phone #1</td>
+                        <td>(555) 454-5674</td>
+                        <td><a href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>Phone #2</td>
+                        <td>(555) 454-5674</td>
+                        <td><a href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>Phone #3</td>
+                        <td>(555) 454-5674</td>
+                        <td><a href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>Phone #4</td>
+                        <td>(555) 454-5674</td>
+                        <td><a href="#">Delete</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              
+            </div>
+            <!-- Number tab content -->
+
+            <!-- Auto refill  -->
+            <div *ngIf="currentTab == 'autoRefill' " class="tabContentMyaccount paymentDetails numberTabCont autorefill">
+              <p class="tabTitle">Auto-refill <br/><span>Plan: Global Call</span></p> 
+              <div class="myNumberButtonArea">
+                  <button mat-button class="submitButton">SHOW ALL</button> 
+                  <button mat-button class="submitButton"  (click)="addNumber()">ADD A NUMBER</button> 
+              </div>
+              <div class="autorefillTextarea">
+                  <p class="autoTextcommon">Auto top up - $10</p>
+                  <p class="enabledText"><mat-icon>check_circle</mat-icon>Enabled</p>
+                  <p class="autoTextcommon">
+                      <span>Card ending in … 1234</span>
+                      <span class="iconSpan" mat-icon-button [matMenuTriggerFor]="moreMenu3">
+                        <mat-icon>more_horiz</mat-icon>
+                      </span> 
+                      <mat-menu #moreMenu3="matMenu">
+                        <button mat-menu-item>
+                          <span>Redial</span>
+                        </button>
+                        <button mat-menu-item>
+                          <span>Check voicemail</span>
+                        </button>
+                      </mat-menu>
+                      
+                  </p>
+              </div>
+            </div>
+            <!-- Auto refill -->
+
+            <!-- One Touch Setup tab content -->
+            <div *ngIf="currentTab == 'oneTouchDial' " class="tabContentMyaccount paymentDetails numberTabCont">
+              <p class="tabTitle">One Touch Setup</p> 
+              <div class="myNumberButtonArea">
+              <button mat-button class="submitButton">SHOW ALL</button> 
+              <button mat-button class="submitButton"  (click)="addNumber()">ADD A NUMBER</button> 
+              </div>
+              <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Phone #1</td>
+                        <td>(555) 454-5674</td>
+                        <td><a href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>Phone #2</td>
+                        <td>(555) 454-5674</td>
+                        <td><a href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>Phone #3</td>
+                        <td>(555) 454-5674</td>
+                        <td><a href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>Phone #4</td>
+                        <td>(555) 454-5674</td>
+                        <td><a href="#">Delete</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              
+            </div>
+            <!-- One Touch Setup tab content -->
+
+            <!-- myProfile tab content -->
+            <div *ngIf="currentTab == 'myProfile' " class="tabContentMyaccount planDetails">
+              <p class="tabTitle">Profile</p> 
+              <div class="accountDetails">
+                <p>Amin Hemani</p>
+                <p>Amin@raza.com</p>
+                <p>5219 N Avenue Toronto, Canada</p>
+                <p>416-453-6543</p>
+                <a mat-button (click)="editProfile()">Edit Profile</a>
+              </div>
+            </div>
+            <!-- myProfile tab content -->
+
+            <!-- callForward tab content -->
+            <div *ngIf="currentTab == 'callForward' " class="tabContentMyaccount callForward planDetails">
+              <p class="tabTitle">Call Forwarding Setup</p>
+              <table class="table orderHistory">
+                <tbody>
+                  
+                  <tr>
+                    <td>S.No</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <td>Call Forwarding No.</td>
+                    <td>647-567-8796</td>
+                  </tr>
+                  <tr>
+                    <td>Destination No.</td>
+                    <td>647-567-8796</td>
+                  </tr>
+                  <tr>
+                    <td>Activation Date</td>
+                    <td>12/05/2017</td>
+                  </tr>
+                  <tr>
+                    <td>Expire Date</td>
+                    <td>12/05/2017</td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td>Diwakar</td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td>Diwakar</td>
+                  </tr>
+                  <tr>
+                    <td>Status</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr>
+                    <td>Action</td>
+                    <td><a href="#">Delete</a></td>
+                  </tr>
+                  
+                  
+                </tbody>
+              </table>   
+              <div class="greyBg">
+                  <table class="table greyBg orderHistory">
+                    <tbody>
+                  
+                  <tr>
+                    <td>S.No</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <td>Call Forwarding No.</td>
+                    <td>647-567-8796</td>
+                  </tr>
+                  <tr>
+                    <td>Destination No.</td>
+                    <td>647-567-8796</td>
+                  </tr>
+                  <tr>
+                    <td>Activation Date</td>
+                    <td>12/05/2017</td>
+                  </tr>
+                  <tr>
+                    <td>Expire Date</td>
+                    <td>12/05/2017</td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td>Diwakar</td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td>Diwakar</td>
+                  </tr>
+                  <tr>
+                    <td>Status</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr>
+                    <td>Action</td>
+                    <td><a href="#">Delete</a></td>
+                  </tr>
+                  
+                  
+                </tbody>
+                  </table>
+              </div>
+
+              <a href="#" class="showFullHistory">Show All</a> 
+              <div class="input_holder1">
+                  <button mat-button class="submitButton">Setup Call Forwarding</button> 
+              </div>
+
+                  
+            </div>
+            <!-- callForward tab content -->
+
+            <!-- rewardsOverview tab content -->
+            <div *ngIf="currentTab == 'rewardsOverview' " class="tabContentMyaccount rewardsOverview planDetails">
+              <p class="tabTitle">Rewards Overview</p>
+              <mat-tab-group>
+              <mat-tab label="Raza Reward">
+                  <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Rewards Points</th>
+                          <th scope="col">Points</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Total Raza Rewards & Trade Points:</td>
+                          <td>1527</td>
+                        </tr>
+                        <tr>
+                          <td>Total Raza Rewards & Trade Points:</td>
+                          <td>1527</td>
+                        </tr>
+                        <tr class="total"> 
+                          <td>Total Available Ponts</td>
+                          <td>2733</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    <table class="showAlltable">
+                      <tr>
+                        <td><a href="#"></a></td>
+                        <td class="text-center"><a href="#">Show All</a></td>
+                        <td class="text-right"><a href="#">Redeem Now</a></td>
+                      </tr>
+                    </table>
+              </mat-tab>
+              <mat-tab label="Refer a Friend">
+                <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Refer-A-Friend Email</th>
+                          <th scope="col">Points</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>email@email.com</td>
+                          <td>1527</td>
+                        </tr>
+                        <tr>
+                          <td>email@email.com</td>
+                          <td>1527</td>
+                        </tr>
+                        <tr class="total"> 
+                          <td>Total Refer A Friend Points</td>
+                          <td>2733</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    <table class="showAlltable">
+                      <tr>
+                        <td><a href="#"></a></td>
+                        <td class="text-center"><a href="#">Show All</a></td>
+                        <td class="text-right"><a href="#">Redeem Now</a></td>
+                      </tr>
+                    </table> 
+              </mat-tab>
+              <mat-tab label="Points Redeemed">
+                <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Rewards Points</th>
+                          <th scope="col">Points</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Total Raza Rewards & Trade Points:</td>
+                          <td>1527</td>
+                        </tr>
+                        <tr>
+                          <td>Total Raza Rewards & Trade Points:</td>
+                          <td>1527</td>
+                        </tr>
+                        <tr class="total"> 
+                          <td>Total Available Ponts</td>
+                          <td>2733</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    <table class="showAlltable">
+                      <tr>
+                        <td><a href="#"></a></td>
+                        <td class="text-center"><a href="#">Show All</a></td>
+                        <td class="text-right"><a href="#">Redeem Now</a></td>
+                      </tr>
+                    </table>
+              </mat-tab>
+            </mat-tab-group>
+            </div>
+
+            <!-- rewards tab cont -->
+
+            <!-- internationalTopup tab cont -->
+            <div *ngIf="currentTab == 'internationalTopup' " class="tabContentMyaccount rewardsOverview planDetails">
+              <p class="tabTitle">International Topup</p>
+              <div class="input_holder1">
+                  <button mat-button class="submitButton">Topup Now</button> 
+              </div> 
+            </div>
+            <!-- internationalTopup tab cont -->
+
+             <!-- virtual tab cont -->
+            <div *ngIf="currentTab == 'virtual' " class="tabContentMyaccount rewardsOverview planDetails">
+              <p class="tabTitle">Virtual Number</p>
+              <mat-tab-group>
+            <mat-tab label="Your Raza Numbers">
+              <table class="table table-striped tableMoreOptions">
+                <thead>
+                  <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Virtual Number</th>
+                    <th scope="col">Forwarded to</th>
+                    <th scope="col">Contact Name</th>
+                    <th scope="col">Billing Type</th>
+                    <th scope="col">Action</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td>+1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>United States</td>
+                    <td>Monthly - $9.99</td>
+                    <td><a href="#">Delete</a></td>
+                    
+                    <td class="moreIcon">
+                      <div class="moreArea">
+                        <button mat-icon-button [matMenuTriggerFor]="editDeleteMenu2">
+                          <mat-icon>more_horiz</mat-icon>
+                        </button>
+                        <mat-menu #editDeleteMenu2="matMenu" class="editDeleteAreaMain">
+                          <ul>
+                            <li><a>Edit</a></li>
+                            <li><a>Delete</a></li>
+                          </ul>
+                        </mat-menu>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>02</td>
+                    <td>+1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>United States</td>
+                    <td>Monthly - $9.99</td>
+                    <td><a href="#">Delete</a></td>
+                    
+                    <td class="moreIcon">
+                      <div class="moreArea">
+                        <button mat-icon-button [matMenuTriggerFor]="editDeleteMenu2">
+                          <mat-icon>more_horiz</mat-icon>
+                        </button>
+                        <mat-menu #editDeleteMenu2="matMenu" class="editDeleteAreaMain">
+                          <ul>
+                            <li><a>Edit</a></li>
+                            <li><a>Delete</a></li>
+                          </ul>
+                        </mat-menu>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>03</td>
+                    <td>+1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>United States</td>
+                    <td>Monthly - $9.99</td>
+                    <td><a href="#">Delete</a></td>
+                    
+                    <td class="moreIcon">
+                      <div class="moreArea">
+                        <button mat-icon-button [matMenuTriggerFor]="editDeleteMenu2">
+                          <mat-icon>more_horiz</mat-icon>
+                        </button>
+                        <mat-menu #editDeleteMenu2="matMenu" class="editDeleteAreaMain">
+                          <ul>
+                            <li><a>Edit</a></li>
+                            <li><a>Delete</a></li>
+                          </ul>
+                        </mat-menu>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>04</td>
+                    <td>+1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>United States</td>
+                    <td>Monthly - $9.99</td>
+                    <td><a href="#">Delete</a></td>
+                    
+                    <td class="moreIcon">
+                      <div class="moreArea">
+                        <button mat-icon-button [matMenuTriggerFor]="editDeleteMenu2">
+                          <mat-icon>more_horiz</mat-icon>
+                        </button>
+                        <mat-menu #editDeleteMenu2="matMenu" class="editDeleteAreaMain">
+                          <ul>
+                            <li><a>Edit</a></li>
+                            <li><a>Delete</a></li>
+                          </ul>
+                        </mat-menu>
+                      </div>
+                    </td>
+                  </tr> 
+                </tbody>
+              </table>
+              <a style="margin-bottom:20px;" class="showFullHistory">Show Full History</a> 
+              <div class="input_holder1">
+                <button mat-button class="submitButton">Buy new number</button> 
+              </div>
+            </mat-tab>
+            <mat-tab label="Order History">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Virtual Number</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Plan Name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Call Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <a style="margin-bottom:20px;"  class="showFullHistory">Show Full History</a> 
+              <div class="input_holder1">
+                <button mat-button class="submitButton">Buy new number</button> 
+              </div>
+            </mat-tab>
+            <mat-tab label="Call Details">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Date & Time</th>
+                    <th scope="col">Source Number</th>
+                    <th scope="col">Forwarded to</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a style="margin-bottom:20px;" class="showFullHistory">Show Full History</a> 
+              <div class="input_holder1">
+                <button mat-button class="submitButton">Buy new number</button> 
+              </div>
+            </mat-tab>
+          </mat-tab-group> 
+            </div>
+            <!-- virtual tab cont -->
+
+        </div>
+        
+    </div>
+
+
+    <div class="onlyDesktopAccount">
+      <div class="leftTabArea">
+         <ul>
+           <li><a>Recharge</a></li>
+           <li>Plan Details</li>
+           <li>Payment Details</li>
+           <li>Pin - Less</li>
+           <li>Auto - Refill</li>
+           <li>One Touch Dial</li>
+           <li>My Profile</li>
+           <li>Call Forwarding</li>
+           <li>Rewards Overview</li>
+           <li>Internatioanl Topup</li>
+           <li class="active">Virtual Numbers</li>
+         </ul>
+      </div>
+      <div class="rightTabArea">
+        <div class="tabContentMyaccount">
+          <p class="tabTitle">Recharge</p> 
+          <div class="rechargeLeft">
+            <p class="commonTabText">My Plans</p>
+            <mat-form-field>
+              <mat-select placeholder="One Touch Dial">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{ food.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="rechargeRight">
+            <p class="commonTabText">Current Balance</p>
+            <p class="currentBalance">$36.45</p>
+            <div class="input_holder1">
+              <button mat-button class="submitButton">Recharge</button> 
+            </div>
+          </div>
+        </div>
+
+        <div class="tabContentMyaccount planDetails">
+          <p class="tabTitle">Virtual Numbers</p> 
+          <mat-tab-group>
+            <mat-tab label="Your Raza Numbers">
+              <table class="table table-striped tableMoreOptions">
+                <thead>
+                  <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Virtual Number</th>
+                    <th scope="col">Forwarded to</th>
+                    <th scope="col">Contact Name</th>
+                    <th scope="col">Billing Type</th>
+                    <th scope="col">Action</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td>+1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>United States</td>
+                    <td>Monthly - $9.99</td>
+                    <td><a href="#">Delete</a></td>
+                    
+                    <td class="moreIcon">
+                      <div class="moreArea">
+                        <button mat-icon-button [matMenuTriggerFor]="editDeleteMenu2">
+                          <mat-icon>more_horiz</mat-icon>
+                        </button>
+                        <mat-menu #editDeleteMenu2="matMenu" class="editDeleteAreaMain">
+                          <ul>
+                            <li><a>Edit</a></li>
+                            <li><a>Delete</a></li>
+                            <li><a>Print</a></li>
+                            <li><a>Email</a></li>
+                          </ul>
+                        </mat-menu>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>02</td>
+                    <td>+1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>United States</td>
+                    <td>Monthly - $9.99</td>
+                    <td><a href="#">Delete</a></td>
+                    
+                    <td class="moreIcon">
+                      <div class="moreArea">
+                        <button mat-icon-button [matMenuTriggerFor]="editDeleteMenu2">
+                          <mat-icon>more_horiz</mat-icon>
+                        </button>
+                        <mat-menu #editDeleteMenu2="matMenu" class="editDeleteAreaMain">
+                          <ul>
+                            <li><a>Edit</a></li>
+                            <li><a>Delete</a></li>
+                            <li><a>Print</a></li>
+                            <li><a>Email</a></li>
+                          </ul>
+                        </mat-menu>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>03</td>
+                    <td>+1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>United States</td>
+                    <td>Monthly - $9.99</td>
+                    <td><a href="#">Delete</a></td>
+                    
+                    <td class="moreIcon">
+                      <div class="moreArea">
+                        <button mat-icon-button [matMenuTriggerFor]="editDeleteMenu2">
+                          <mat-icon>more_horiz</mat-icon>
+                        </button>
+                        <mat-menu #editDeleteMenu2="matMenu" class="editDeleteAreaMain">
+                          <ul>
+                            <li><a>Edit</a></li>
+                            <li><a>Delete</a></li>
+                            <li><a>Print</a></li>
+                            <li><a>Email</a></li>
+                          </ul>
+                        </mat-menu>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>04</td>
+                    <td>+1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>United States</td>
+                    <td>Monthly - $9.99</td>
+                    <td><a href="#">Delete</a></td>
+                    
+                    <td class="moreIcon">
+                      <div class="moreArea">
+                        <button mat-icon-button [matMenuTriggerFor]="editDeleteMenu2">
+                          <mat-icon>more_horiz</mat-icon>
+                        </button>
+                        <mat-menu #editDeleteMenu2="matMenu" class="editDeleteAreaMain">
+                          <ul>
+                            <li><a>Edit</a></li>
+                            <li><a>Delete</a></li>
+                            <li><a>Print</a></li>
+                            <li><a>Email</a></li>
+                          </ul>
+                        </mat-menu>
+                      </div>
+                    </td>
+                  </tr> 
+                </tbody>
+              </table>
+              <a style="margin-bottom:20px;" class="showFullHistory">Show Full History</a> 
+              <div class="input_holder1">
+                <button mat-button class="submitButton">Buy new number</button> 
+              </div>
+            </mat-tab>
+            <mat-tab label="Order History">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Virtual Number</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Plan Name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Call Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>BRF1E422EADF</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>V Number</td>
+                    <td>$9.99</td>
+                    <td><a href="#">View</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <a style="margin-bottom:20px;"  class="showFullHistory">Show Full History</a> 
+              <div class="input_holder1">
+                <button mat-button class="submitButton">Buy new number</button> 
+              </div>
+            </mat-tab>
+            <mat-tab label="Call Details">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Date & Time</th>
+                    <th scope="col">Source Number</th>
+                    <th scope="col">Forwarded to</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                  <tr>
+                    <td>10/2/2017 4:23PM (CST)</td>
+                    <td>1 (773) 225 3563</td>
+                    <td>1 (647) 6324914</td>
+                    <td>00:11:00</td>
+                    <td>0.45 ¢</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a style="margin-bottom:20px;" class="showFullHistory">Show Full History</a> 
+              <div class="input_holder1">
+                <button mat-button class="submitButton">Buy new number</button> 
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+          
+        </div>
+        
+
+        
+
+
+      </div>
+    </div>
+</div>
+
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+
+</mat-sidenav-content>
+</mat-sidenav-container>
+

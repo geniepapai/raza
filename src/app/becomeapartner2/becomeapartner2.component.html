@@ -1,0 +1,182 @@
+
+<mat-sidenav-container>
+<mat-sidenav class="slidemenu" fixedInViewport="true" #sidenav [mode]="mode.value">
+    <div class="closs_area">
+        <span class="cross-icon" (click)="sidenav.toggle()">
+          <img src="assets/images/cross_icon_sidemenu.jpg" alt=""/>
+        </span>
+        <span>
+          <mat-form-field>
+          <mat-select placeholder="EN">
+            <mat-option value="en">EN</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </span>         
+    </div>
+    <mat-nav-list role="list">
+      <app-sidemenu></app-sidemenu>
+    </mat-nav-list>
+    <div class="form_row1">
+        <div class="input_holder1">
+            <button mat-button class="submitButton">Free Trail</button> 
+        </div>
+    </div>
+</mat-sidenav>
+
+<mat-sidenav-content>
+<div class="wraper">
+<div class="first_fold">
+
+<header [ngClass]="{'active': headerValue == 1, 'disabled2': headerValue == 2}" class="header_style2">
+  
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN1" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+    </button>
+    <span class="colorWhite">DEALS</span>
+    <span class="colorWhite">SHOP</span>
+    <span class="example-spacer"></span>
+    <span class="logo"><a routerLink="/"><img src="assets/images/raza_logo.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite">RECHARGE</span>
+    <button class="matButtonBGN" mat-button class="nobg" [matMenuTriggerFor]="menu">
+      <img src="assets/images/account.svg" alt=""/>
+    </button>
+    <mat-menu #menu="matMenu" class="loginDropDown">
+      <h3>Welcome</h3>
+      <p>Manage your account by just logging in. Discover new features that are absolutely free!</p>
+
+      <p>New customer? Register or just download Raza app now!</p>
+      <button mat-button class="submitButton">Sign Up</button>
+      <button mat-button class="submitButton loginButton">Login</button> 
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<header   [ngClass]="{'active': headerValue == 2, 'disabled': headerValue == 1}" class="header_style2 headerBackground"> 
+  <mat-toolbar>  
+    <mat-toolbar-row>
+    <button class="matButtonBGN2" mat-button (click)="sidenav.toggle()">
+      <img src="assets/images/menu_icon_black.png" alt=""/>
+      <img src="assets/images/more_icon_white.png"  alt=""/>
+    </button>
+    <span class="colorWhite">DEALS</span>
+    <span class="colorWhite">SHOP</span> 
+    <span class="example-spacer"></span>
+    <span><a routerLink="/"><img  width="137" height="46" src="assets/images/raza_logo_black.png" alt=""/></a></span>
+    <span class="example-spacer"></span>
+    <span class="colorWhite">RECHARGE</span>
+    <button class="matButtonBGN" mat-button class="nobg" [matMenuTriggerFor]="menu1">
+      <img src="assets/images/account_black.png" alt=""/> 
+    </button>
+    <mat-menu #menu1="matMenu" class="loginDropDown">
+      <h3>Welcome , Nagesh!</h3>
+      <button mat-button class="submitButton">Log out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<h1 class="heading_style1">	
+Become a Partner<br/>
+<span>Partner with the most trusted brand and see your business growing!</span>
+</h1>
+<div class="home_banner becamepartner_banner">
+    <!-- <img src="assets/images/banner_image.png" alt="banner"> -->
+</div>
+</div>
+
+<div class="second_fold">
+		<div class="container">
+			<div class="row">
+				<h2 class="heading_style2">Earn up to $10,000 per month</h2>
+				<div class="col-md-4 three_service">
+					<div class="icon_holder1"><img src="assets/images/earn_shape.svg" alt="icon"></div>
+					<h3 class="heading_style2">Earn maximum<br/> commission</h3>
+					<p>Do you own a business and want to earn extra money? Join Raza and start selling our products today! Our excellent commission structure will get you more money without any hassle of inventory or deposit. So start today and earn today!</p>
+				</div>
+				<div class="col-md-4 three_service tab2Service">
+					<div class="icon_holder1"><img src="assets/images/customers_icon.svg" alt="icon"></div>
+					<h3 class="heading_style2">Increase walk-in<br/> customers</h3>
+					<p>Raza is a well known brand which provides the best reliable products that our customers love; expanding your business by selling Raza products will not only make you money but increases your walk in customers.</p>
+				</div>
+				<div class="col-md-4 three_service tab3Service">
+					<div class="icon_holder1"><img src="assets/images/free_training_icon.svg" alt="icon"></div>
+					<h3 class="heading_style2">FREE training</h3>
+					<p>Get started in just 30 minutes. Your account manager will make you understand the key aspects including access to customer and commission management tools. The technical support will assist with any queries 24/7 365 days.</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+</div>
+
+<div class="signupformArea">
+  <div class="container">
+    <form class="example-form">
+        <h2 class="heading_style2">Create a New Account </h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="floatRight">
+                    <mat-form-field class="example-full-width">
+                        <input placeholder="First Name" matInput value="">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <mat-form-field class="example-full-width">
+                    <input placeholder="Last Name" matInput value="">
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6">
+                <div class="floatRight">
+                    <mat-form-field class="example-full-width">
+                        <input placeholder="Email" matInput value="">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <mat-form-field class="example-full-width">
+                    <input placeholder="Phone" matInput value="">
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6">
+                <div class="floatRight">
+                    <mat-form-field>
+                        <mat-select placeholder="City">
+                            <mat-option *ngFor="let city of cities" [value]="city.value">
+                                {{ city.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <mat-form-field>
+                    <mat-select placeholder="Country">
+                        <mat-option *ngFor="let country of countries" [value]="country.value">
+                            {{ country.viewValue }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 textarea">
+                <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Leave a comment"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <button mat-button class="submitButton">Submit</button>  
+    </form>
+  </div>
+</div>
+<!--Footer-->
+<app-footer></app-footer>
+<!--Footer-->
+</mat-sidenav-content>
+</mat-sidenav-container>
