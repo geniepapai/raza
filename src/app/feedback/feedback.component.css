@@ -22,6 +22,8 @@
 .countryNumber span{ color: #919EAF; font-size: 16px; font-family: 'Montserrat', sans-serif; font-weight: 400;}
 .marginB2 a:hover{ text-decoration: none;}
 
+.countryNumber span:hover{ text-decoration: underline;}
+
 
 @media only screen and (max-width: 650px)  {
   
